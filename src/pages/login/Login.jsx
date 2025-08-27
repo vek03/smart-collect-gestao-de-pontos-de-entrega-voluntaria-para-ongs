@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router';
+import { generateToken, saveToken } from '../../utils/auth';
 import styles from './Login.module.css';
 
 export default function Login() {
@@ -8,7 +9,7 @@ export default function Login() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
     if (!email || !password) {
@@ -26,8 +27,11 @@ export default function Login() {
       return;
     }
 
+    const token = await generateToken({ email });
+    saveToken(token);
+
     setError('');
-    navigate('/');
+    navigate('/collection-status');
   };
 
   return (

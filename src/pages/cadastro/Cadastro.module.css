@@ -7,41 +7,48 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #4e54c8, #8f94fb);
-  height: 100vh;
+  background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 24px;
 }
 
 /* Container */
 .login-container {
   background-color: #fff;
-  padding: 40px 30px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 40px 32px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   width: 100vw;
-  max-width: 700px;
+  max-width: 960px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Título */
 .login-container h2 {
   text-align: center;
-  margin-bottom: 25px;
-  color: #333;
+  margin-bottom: 20px;
+  color: #222;
+  font-size: 26px;
 }
 
 /* Formulário em grid */
 form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px 20px;
 }
 
-/* Campos que ocupam 2 colunas */
+/* Campos que ocupam todas as colunas */
 form .input-group.full-width {
   grid-column: 1 / -1;
+}
+
+/* Utilitário: ocupar 2 colunas */
+form .input-group.span-2 {
+  grid-column: span 2;
 }
 
 /* Grupo de inputs */
@@ -52,28 +59,31 @@ form .input-group.full-width {
 
 .input-group label {
   margin-bottom: 6px;
-  font-weight: bold;
-  color: #555;
+  font-weight: 700;
+  color: #444;
 }
 
 .input-group input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 12px 14px;
+  border: 1px solid #dcdde1;
+  border-radius: 10px;
   font-size: 14px;
-  transition: border-color 0.3s ease;
+  background: #fafbff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .input-group input:focus {
   outline: none;
   border-color: #4e54c8;
+  box-shadow: 0 0 0 4px rgba(78, 84, 200, 0.15);
+  background: #fff;
 }
 
 /* Erro */
 .error {
   grid-column: 1 / -1;
   color: #e74c3c;
-  margin-top: -10px;
+  margin-top: -4px;
   font-size: 14px;
   text-align: center;
 }
@@ -82,17 +92,24 @@ form .input-group.full-width {
 .login-button {
   grid-column: 1 / -1;
   padding: 12px;
-  background-color: #4e54c8;
+  background: linear-gradient(90deg, #4e54c8, #6c72e6);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.05s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 6px 14px rgba(78, 84, 200, 0.35);
 }
 
 .login-button:hover {
-  background-color: #3b40a0;
+  opacity: 0.95;
+}
+
+.login-button:active {
+  transform: translateY(1px);
 }
 
 /* Link de login */
@@ -100,11 +117,18 @@ form span {
   grid-column: 1 / -1;
   text-align: center;
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 8px;
+  color: #555;
 }
 
 /* Responsivo */
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
+  form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
   form {
     grid-template-columns: 1fr;
   }

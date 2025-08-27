@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router';
+import { generateToken, saveToken } from '../../utils/auth';
 import styles from './Cadastro.module.css';
 
 export default function Cadastro() {
@@ -17,7 +18,7 @@ export default function Cadastro() {
 
   const navigate = useNavigate();
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
 
     // Validações básicas
@@ -51,16 +52,18 @@ export default function Cadastro() {
       return;
     }
 
+    const token = await generateToken({ email });
+    saveToken(token);
+
     setError('');
-    alert('Conta registrada com sucesso!');
-    navigate('/');
+    navigate('/collection-points');
   };
 
   return (
-    <div className={styles.loginContainer}>
+    <div className={styles['login-container']}>
       <h2>Crie uma conta</h2>
       <form onSubmit={handleRegister}>
-        <div className="input-group">
+        <div className={`${styles['input-group']} ${styles['full-width']}`}>
           <label htmlFor="email">E-mail</label>
           <input
             type="email"
@@ -71,7 +74,7 @@ export default function Cadastro() {
           />
         </div>
 
-        <div className="input-group">
+        <div className={styles['input-group']}>
           <label htmlFor="password">Senha</label>
           <input
             type="password"
@@ -82,7 +85,7 @@ export default function Cadastro() {
           />
         </div>
 
-        <div className="input-group">
+        <div className={styles['input-group']}>
           <label htmlFor="confirmPassword">Confirme a senha</label>
           <input
             type="password"
@@ -93,7 +96,7 @@ export default function Cadastro() {
           />
         </div>
 
-        <div className="input-group">
+        <div className={styles['input-group']}>
           <label htmlFor="telefone">Telefone</label>
           <input
             type="text"
@@ -104,7 +107,7 @@ export default function Cadastro() {
           />
         </div>
 
-        <div className="input-group">
+        <div className={styles['input-group']}>
           <label htmlFor="cep">CEP</label>
           <input
             type="text"
@@ -115,7 +118,7 @@ export default function Cadastro() {
           />
         </div>
 
-        <div className="input-group">
+        <div className={`${styles['input-group']} ${styles['span-2']}`}>
           <label htmlFor="rua">Rua</label>
           <input
             type="text"
@@ -126,7 +129,7 @@ export default function Cadastro() {
           />
         </div>
 
-        <div className="input-group">
+        <div className={styles['input-group']}>
           <label htmlFor="numero">Número</label>
           <input
             type="text"
@@ -137,7 +140,7 @@ export default function Cadastro() {
           />
         </div>
 
-        <div className="input-group">
+        <div className={styles['input-group']}>
           <label htmlFor="bairro">Bairro</label>
           <input
             type="text"
@@ -148,7 +151,7 @@ export default function Cadastro() {
           />
         </div>
 
-        <div className="input-group">
+        <div className={styles['input-group']}>
           <label htmlFor="cidade">Cidade</label>
           <input
             type="text"
@@ -159,7 +162,7 @@ export default function Cadastro() {
           />
         </div>
 
-        <div className="input-group">
+        <div className={styles['input-group']}>
           <label htmlFor="estado">Estado</label>
           <input
             type="text"
@@ -170,9 +173,9 @@ export default function Cadastro() {
           />
         </div>
 
-        {error && <div className="error">{error}</div>}
+        {error && <div className={styles.error}>{error}</div>}
 
-        <button type="submit" className="login-button">Registrar</button>
+        <button type="submit" className={styles['login-button']}>Registrar</button>
 
         <span>Já tem uma conta? Faça <Link to="/login">Login</Link></span>
       </form>

@@ -6,20 +6,21 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  font-family: "Arial", sans-serif;
+  background-color: #f6f7fb;
   color: #333;
 }
 
 .container {
-  width: 80%;
+  width: min(1120px, 90%);
   margin: 0 auto;
 }
 
 /* Seção de Introdução */
 .intro {
-  background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
-  height: 100vh;
+  background: url("https://via.placeholder.com/1600x900") no-repeat center
+    center/cover;
+  min-height: 100vh;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -29,29 +30,35 @@ body {
 }
 
 .intro h1 {
-  font-size: 60px;
+  font-size: clamp(36px, 6vw, 60px);
   margin-bottom: 20px;
   font-weight: 700;
 }
 
 .intro p {
-  font-size: 24px;
+  font-size: clamp(16px, 2.5vw, 24px);
   margin-bottom: 30px;
 }
 
 .cta-button {
-  background-color: #ff6347;
+  background: linear-gradient(90deg, #ff7a59, #ff6347);
   color: white;
-  font-size: 22px;
-  padding: 15px 40px;
+  font-size: clamp(16px, 2.5vw, 22px);
+  padding: 14px 36px;
   border: none;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.3s ease-in-out;
+  border-radius: 10px;
+  transition: transform 0.05s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 8px 18px rgba(255, 99, 71, 0.35);
 }
 
 .cta-button:hover {
-  background-color: #e5532c;
+  opacity: 0.95;
+}
+
+.cta-button:active {
+  transform: translateY(1px);
 }
 
 /* Seções principais */
@@ -82,11 +89,13 @@ body {
   max-width: 100%;
   height: auto;
   margin-top: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Características */
 .features {
-  background-color: #f8f8f8;
+  background-color: #f8f9fe;
 }
 
 .features h2 {
@@ -97,27 +106,33 @@ body {
 
 .features-list {
   display: flex;
-  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .feature {
-  width: 30%;
+  width: min(320px, 90%);
   text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
 }
 
 .feature h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 22px;
+  margin-bottom: 12px;
 }
 
 .feature p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.6;
 }
 
 /* Depoimentos */
 .testimonials {
-  background-color: #eee;
+  background-color: #eef1ff;
   padding: 50px 0;
 }
 
@@ -127,17 +142,22 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  gap: 20px;
 }
 
 .testimonial {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   font-style: italic;
   font-size: 18px;
-  max-width: 600px;
+  max-width: 700px;
+  background: #fff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .testimonial span {
-  margin-top: 15px;
+  margin-top: 10px;
   font-weight: bold;
   display: block;
 }
@@ -149,24 +169,32 @@ body {
   align-items: center;
 }
 
-.contact input, .contact textarea {
+.contact input,
+.contact textarea {
   width: 100%;
-  padding: 15px;
+  padding: 14px;
   margin: 10px 0;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #dcdde1;
+  border-radius: 10px;
+  background: #fff;
 }
 
 .contact button {
-  background-color: #ff6347;
+  background: linear-gradient(90deg, #ff7a59, #ff6347);
   color: white;
-  padding: 15px 30px;
+  padding: 14px 30px;
   border: none;
-  font-size: 20px;
+  font-size: 18px;
+  border-radius: 10px;
   cursor: pointer;
+  box-shadow: 0 8px 18px rgba(255, 99, 71, 0.35);
 }
 
 .contact button:hover {
-  background-color: #e5532c;
+  opacity: 0.95;
+}
+
+.contact button:active {
+  transform: translateY(1px);
 }
