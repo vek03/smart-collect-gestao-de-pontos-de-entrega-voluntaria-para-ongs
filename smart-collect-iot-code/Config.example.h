@@ -1,9 +1,14 @@
 #pragma once
 
 // ====== WI-FI ======
-constexpr const char* WIFI_SSID = "SEU_SSID";
-constexpr const char* WIFI_PASS = "SUA_SENHA";
-constexpr const char* OTA_HOSTNAME = "esp32-lixeira"; // mDNS: esp32-lixeira.local
+constexpr const char* WIFI_SSID = "YOUR_WIFI_SSID";
+constexpr const char* WIFI_PASS = "YOUR_WIFI_PASSWORD";
+constexpr const char* OTA_HOSTNAME = "smart-collect-iot"; // mDNS: smart-collect-iot.local
+
+// ====== FIREBASE REALTIME ======
+constexpr const char* FIREBASE_DEVICE_ID = "1X";
+constexpr const char* FIREBASE_REFERENCE_URL = "YOUR_FIREBASE_REFERENCE_URL";
+constexpr const char* FIREBASE_AUTH_TOKEN = "YOUR_FIREBASE_AUTH_TOKEN";
 
 // ====== LCD I2C ======
 constexpr uint8_t LCD_I2C_ADDR = 0x27; // comum: 0x27 ou 0x3F
@@ -11,12 +16,15 @@ constexpr uint8_t LCD_COLS = 16;
 constexpr uint8_t LCD_ROWS = 2;
 
 // ====== SENSORES ULTRASSÔNICOS ======
-// Sensor A
-constexpr int TRIG_A = 12;
-constexpr int ECHO_A = 14;
-// Sensor B
-constexpr int TRIG_B = 27;
-constexpr int ECHO_B = 26;
+// Sensor A (AJ-SR04M)
+constexpr int TRIG_A = 16;
+constexpr int ECHO_A = 17;
+// Sensor B (HC-SR04)
+constexpr int TRIG_B = 15;
+constexpr int ECHO_B = 4;
+// Sensor C (AJ-SR04M)
+constexpr int TRIG_C = 18;
+constexpr int ECHO_C = 5;
 
 // Tempo máximo de eco (us) ~ distância máx. ~ 5m -> ~30000 us
 constexpr unsigned long PULSE_TIMEOUT_US = 30000;

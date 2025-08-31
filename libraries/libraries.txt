@@ -1,3 +1,19 @@
 LINKS DAS LIBRARIES DO PROJETO:
 
-- ?
+- Firebase:
+https://github.com/Rupakpoddar/FirebaseArduino 
+
+- LiquidCrystal_I2C
+https://github.com/markub3327/LiquidCrystal_I2C
+
+- ArduinoJson
+https://arduinojson.org/?utm_source=meta&utm_medium=library.properties 
+
+- WifiManager
+https://github.com/tzapu/WiFiManager.git 
+
+Libraries inclusas no Arduino IDE:
+- Wifi
+- Arduino
+- ArduinoOTA
+- Wire
