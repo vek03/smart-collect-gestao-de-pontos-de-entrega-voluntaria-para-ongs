@@ -1,9 +1,9 @@
-import { Navigate } from 'react-router';
-import { isAuthenticatedQuick } from '../utils/auth';
+import { Navigate } from 'react-router-dom';
+import { isAuthenticated } from '../utils/auth.js';
 
 export default function ProtectedRoute({ children }) {
-  if (!isAuthenticatedQuick()) {
+  if (!isAuthenticated()) {
     return <Navigate to="/login" replace />;
   }
   return children;
-} 
+}

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router';
-import { generateToken, saveToken } from '../../utils/auth';
+import { useNavigate, Link } from 'react-router-dom';
+import { login, saveToken, generateToken } from '../../utils/auth.js';
 import styles from './Login.module.css';
 
 export default function Login() {
@@ -11,27 +11,17 @@ export default function Login() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    if (!email || !password) return setError('Preencha todos os campos.');
 
-    if (!email || !password) {
-      setError('Por favor, preencha todos os campos.');
-      return;
+    try {
+      await login(email, password);
+      const token = await generateToken({ email });
+      saveToken(token);
+      navigate('/collection-points');
+    } catch (err) {
+      console.error(err);
+      setError('Email ou senha inválidos.');
     }
-
-    if (!/\S+@\S+\.\S+/.test(email)) {
-      setError('Por favor, insira um e-mail válido.');
-      return;
-    }
-
-    if (password.length < 8) {
-      setError('A senha precisa ter no mínimo 8 caracteres.');
-      return;
-    }
-
-    const token = await generateToken({ email });
-    saveToken(token);
-
-    setError('');
-    navigate('/collection-status');
   };
 
   return (
@@ -39,32 +29,16 @@ export default function Login() {
       <h2>Login</h2>
       <form onSubmit={handleLogin}>
         <div className={styles.inputGroup}>
-          <label htmlFor="email">E-mail</label>
-          <input
-            type="text"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Digite seu e-mail"
-          />
+          <label>Email</label>
+          <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Digite seu e-mail"/>
         </div>
         <div className={styles.inputGroup}>
-          <label htmlFor="password">Senha</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Digite sua senha"
-          />
+          <label>Senha</label>
+          <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Digite sua senha"/>
         </div>
-        <button type="submit" className={styles.loginButton}>
-          Entrar
-        </button>
-        <span>
-          Não tem cadastro? <Link to="/register">Crie</Link> uma conta
-        </span>
         {error && <div className={styles.error}>{error}</div>}
+        <button type="submit" className={styles.loginButton}>Entrar</button>
+        <span>Não tem conta? <Link to="/register">Crie uma conta</Link></span>
       </form>
     </div>
   );
