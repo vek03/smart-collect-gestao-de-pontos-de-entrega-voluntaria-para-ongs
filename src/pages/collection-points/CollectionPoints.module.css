@@ -1,7 +1,7 @@
 /* Container e background */
 .container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #fff;
   display: flex;
   flex-direction: column;
   font-family: 'Inter', sans-serif;
@@ -19,7 +19,7 @@
 }
 
 .header h1 {
-  color: white;
+  color: #000;
   font-size: 28px;
   font-weight: 700;
 }
@@ -32,7 +32,7 @@
 .statusButton,
 .logoutButton {
   background: rgba(255, 255, 255, 0.2);
-  color: white;
+  color: #000;
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 8px 18px;
   border-radius: 10px;
@@ -43,7 +43,7 @@
 
 .statusButton:hover,
 .logoutButton:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0);
   transform: translateY(-2px);
 }
 
@@ -83,7 +83,7 @@
 }
 
 .addButton {
-  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  background: linear-gradient(135deg, #66eaa6, #19a352);
   color: white;
   border: none;
   padding: 12px 20px;
@@ -126,7 +126,7 @@
 }
 
 .primaryAddButton {
-  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  background: linear-gradient(135deg, #66eaa6, #19a352);
   color: white;
   border: none;
   padding: 14px 28px;

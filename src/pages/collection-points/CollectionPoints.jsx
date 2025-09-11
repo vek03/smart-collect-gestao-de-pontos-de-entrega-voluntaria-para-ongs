@@ -59,8 +59,8 @@ export default function CollectionPoints() {
             <div className={styles.emptyState}>
               <div className={styles.emptyIcon}>
                 <svg viewBox="0 0 64 64" fill="none">
-                  <circle cx="32" cy="32" r="30" stroke="#4e54c8" strokeWidth="4"/>
-                  <path d="M20 32l8 8 16-16" stroke="#4e54c8" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="32" cy="32" r="30" stroke="#43B02A" strokeWidth="4"/>
+                  <path d="M20 32l8 8 16-16" stroke="#43B02A" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
               <h3>Nenhum ponto de coleta encontrado</h3>
