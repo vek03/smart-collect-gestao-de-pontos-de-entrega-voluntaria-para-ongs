@@ -106,10 +106,17 @@ SmartCollect-IoT/
    git clone https://github.com/fatec-zona-leste/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs.git
 ```
 
-2. Abra o projeto na Arduino IDE ou PlatformIO.
-3. Configure suas credenciais do Firebase e do Wi-Fi no arquivo de configuração.
-4. Compile e faça o upload para o ESP32.
-5. Conecte os sensores e o display conforme o esquema elétrico.
+2. Troque para a branch do IoT:
+
+```bash
+   git checkout -b iot origin/iot
+```
+
+3. Abra o projeto na Arduino IDE ou PlatformIO.
+4. Duplique o arquivo `smart-collect-iot-code/Config.example.h` e renomeie a cópia para `Config.h`
+5. Configure suas credenciais do Firebase e do Wi-Fi no arquivo de configuração `Config.h`.
+6. Compile e faça o upload para o ESP32.
+7. Conecte os sensores e o display conforme o esquema elétrico.
 
 ---
 
@@ -168,6 +175,7 @@ SmartCollect-IoT/
 <p align="center">  
   <sub>© 2025 Smart Collect — Todos os direitos reservados</sub>  
 </p>
+
 
 
 
