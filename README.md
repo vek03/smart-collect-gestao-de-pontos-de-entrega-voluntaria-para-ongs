@@ -107,7 +107,8 @@ SmartCollect-IoT/
 ---
 
 ## 📜 Licença
-> Este projeto é distribuído sob a licença GPL-3.0. Consulte o arquivo [LICENCE](LICENSE)
+> Este projeto é distribuído sob a licença GPL-3.0. Consulte o arquivo [LICENCE](LICENSE.txt)
  para mais detalhes.
+
 
 
