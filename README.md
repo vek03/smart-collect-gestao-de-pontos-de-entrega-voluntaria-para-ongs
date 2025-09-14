@@ -73,10 +73,6 @@ Exemplo de protótipo de dashboard:
   <img src="https://img.shields.io/badge/Demo-Em%20Breve-lightgrey?style=for-the-badge"/>
 </p>  
 
-<p align="center">
-  <img src="https://dummyimage.com/700x400/cccccc/000000.png&text=Exemplo+Dashboard" alt="Exemplo Dashboard"/>
-</p>  
-
 ---
 
 ## 🛠️ Requisitos
@@ -93,16 +89,15 @@ Exemplo de protótipo de dashboard:
 ```bash
 smart-collect-ui/
 │
-├── assets/                   # Contém todas as logos e ícones do SmartCollect
-├── circuit/                  # Contém arquivos Fritzing e diagramas de todos os componentes eletrônicos
-├── examples/                 # Arquivos de teste para cada Função do projeto
-├── libraries/                # Bibliotecas externas utilizadas
-├── docs/                     # Documentação complementar
-├── smart-collect-iot-code/   # Código fonte da aplicação em C++
-├── .gitignore            # Arquivo de configuração do Git para ignorar arquivos de environments
-├── LICENSE.txt               # Licença atribuída ao repositório
-├── platformio.txt            # Arquivo de docuymentação das configurações utilizadas para rodar o projeto
-└── README.md                 # Arquivo de explicação do projeto
+├── public/            # Arquivos públicos acessíveis diretamente, como ícones e imagens estáticas
+├── src/               # Código-fonte principal da aplicação
+│   ├── assets/        # Logos, ícones e outros arquivos estáticos usados no front-end
+│   ├── components/    # Componentes reutilizáveis da interface (ex: Header, Footer, rotas protegidas)
+│   ├── pages/         # Páginas principais do sistema (cadastro, login, home, etc.)
+│   ├── utils/         # Funções utilitárias e helpers usados em diferentes partes do projeto
+│
+├── .env.example       # Exemplo de configuração das variáveis de ambiente
+├── index.html         # Arquivo HTML base da aplicação React
 ```
 
 ---
