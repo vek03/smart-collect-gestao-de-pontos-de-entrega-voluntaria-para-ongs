@@ -19,8 +19,19 @@ A solução tem como objetivo **apoiar ONGs** no gerenciamento de pontos de cole
 
 ## 🖥️ Tecnologias
 
-- **C++** – Desenvolvimento do firmware no ESP32  
-- **Firebase Realtime Database** – Armazenamento e sincronização dos dados na nuvem  
+<div align="left">
+  <img src="https://skillicons.dev/icons?i=cpp,firebase,arduino,git,github"/>
+
+  <br><br>
+
+| **Camada**           | **Tecnologias**                                     |
+|----------------------|-----------------------------------------------------|
+| **Lógica**           | C++ Linguagem de programação do ESP32               |
+| **Banco de Dados**   | Firebase Realtime (armazenamento em tempo real)     |
+| **IoT**              | Sensores ultrassônicos · Microcontrolador ESP32     |
+| **Versionamento**    | Git · GitHub                                        |
+
+</div>  
 
 ---
 
@@ -110,6 +121,12 @@ SmartCollect-IoT/
 > Este projeto é distribuído sob a licença GPL-3.0. Consulte o arquivo [LICENCE](LICENSE.txt)
  para mais detalhes.
 
+---
 
+## 👥 Colaboradores
 
+- **Gabriel da Silva Mendes** [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="16"/>](https://www.linkedin.com/in/victorncardoso/) [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="16"/>](https://github.com/gabrielMendes21)
+   
+- **Juan Farias da Rocha** [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="16"/>](https://www.linkedin.com/in/gabrieldasilvamendes/) [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="16"/>](https://github.com/juan9321)
 
+- **Victor Cardoso** [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="16"/>](https://www.linkedin.com/in/juan-farias-da-rocha/) [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="16"/>](https://github.com/vek03)
