@@ -42,8 +42,6 @@ A branch do frontend que hospeda a UI está disponível no seguinte link:
 
 ---
 
----
-
 ## 🚀 Funcionalidades
 
 - Leitura da distância por sensores ultrassônicos  
@@ -111,4 +109,5 @@ SmartCollect-IoT/
 ## 📜 Licença
 > Este projeto é distribuído sob a licença GPL-3.0. Consulte o arquivo [LICENCE](LICENSE)
  para mais detalhes.
+
 
