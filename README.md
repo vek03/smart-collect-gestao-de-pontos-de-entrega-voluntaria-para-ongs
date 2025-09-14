@@ -141,10 +141,10 @@ SmartCollect-IoT/
 ---
 
 ## 📌 Status do Projeto
-> 🚀 Release (v1.0-iot-beta)[https://github.com/fatec-zona-leste/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/v1.0-iot-beta] - Primeira versão estável do IoT 
-> 🚧 Em desenvolvimento – Release v1.0-iot-alpha
-> 🚧 Em desenvolvimento – Release v2.0-iot-beta
-> 🚧 Em desenvolvimento – Release v2.0-iot-alpha
+> 🚀 Release [v1.0-iot-beta](https://github.com/fatec-zona-leste/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/v1.0-iot-beta) - Primeira versão estável do IoT 
+- 🚧 Em desenvolvimento – Release v1.0-iot-alpha
+- 🚧 Em desenvolvimento – Release v2.0-iot-beta
+- 🚧 Em desenvolvimento – Release v2.0-iot-alpha
 
 ---
 
@@ -198,6 +198,7 @@ SmartCollect-IoT/
 <p align="center">  
   <sub>© 2025 Smart Collect — Todos os direitos reservados</sub>  
 </p>
+
 
 
 
