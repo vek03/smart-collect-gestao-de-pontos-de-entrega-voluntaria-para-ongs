@@ -24,7 +24,7 @@ O **SmartCollect IoT** busca tornar os Pontos de Entrega Voluntária mais **efic
 
 ---
 
-## 🔧 Peças Utilizadas
+## 🔧 Componentes Eletrônicos
 
 - **ESP32** – Microcontrolador principal (Wi-Fi integrado)  
 - **Display LCD 16X2** – Exibição local das informações  
@@ -167,6 +167,7 @@ SmartCollect-IoT/
 <p align="center">  
   <sub>© 2025 Smart Collect — Todos os direitos reservados</sub>  
 </p>
+
 
 
 
