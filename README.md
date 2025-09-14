@@ -1,11 +1,21 @@
 # Smart Collect  
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Licença-MIT-green?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Contribuições-Bem%20vindas-blue?style=for-the-badge"/>
+</p>
+
 ---
 
 ## 1. Introdução  
 
 O **Smart Collect** é uma solução tecnológica voltada ao **gerenciamento inteligente de resíduos sólidos urbanos**.  
 A plataforma integra **Internet das Coisas (IoT)**, **sensoriamento em tempo real** e **análise de dados**, promovendo práticas sustentáveis e reduzindo custos operacionais.  
+
+<p align="center">
+  <img src="https://dummyimage.com/700x300/cccccc/000000.png&text=Smart+Collect+-+Exemplo+Ilustrativo" alt="Ilustração Smart Collect"/>
+</p>  
 
 Este sistema foi desenvolvido como **Trabalho de Conclusão de Curso (TCC)** no curso de **Análise e Desenvolvimento de Sistemas** da **FATEC Zona Leste**.  
 
@@ -15,30 +25,42 @@ Este sistema foi desenvolvido como **Trabalho de Conclusão de Curso (TCC)** no 
 
 O projeto tem como metas principais:  
 
-- **Monitoramento inteligente:** implementar sensores IoT para acompanhar continuamente os níveis de resíduos.  
-- **Apoio à decisão:** oferecer dashboards interativos com indicadores estratégicos.  
-- **Otimização logística:** reduzir custos operacionais com rotas de coleta mais eficientes.  
-- **Sustentabilidade urbana:** incentivar práticas alinhadas ao conceito de **Smart Cities**.  
+- **Monitoramento inteligente:** sensores IoT para acompanhar continuamente os níveis de resíduos.  
+- **Apoio à decisão:** dashboards interativos com indicadores estratégicos.  
+- **Otimização logística:** redução de custos operacionais por meio de rotas eficientes.  
+- **Sustentabilidade urbana:** incentivo a práticas alinhadas ao conceito de **Smart Cities**.  
+
+<p align="center">
+  <img src="https://dummyimage.com/600x300/eeeeee/000000.png&text=Exemplo+-+Dashboard+Indicadores" alt="Dashboard exemplo"/>
+</p>  
 
 ---
 
 ## 3. Funcionalidades  
 
-### Monitoramento em tempo real  
+### 🔹 Monitoramento em tempo real  
 Sensores ultrassônicos instalados nos coletores acompanham continuamente o nível de resíduos.  
 
-### Dashboard interativo  
+### 🔹 Dashboard interativo  
 Interface web para exibição de indicadores, relatórios e gráficos comparativos.  
 
-### Notificações inteligentes  
+### 🔹 Notificações inteligentes  
 Alertas automáticos são enviados quando a coleta é necessária, evitando deslocamentos desnecessários.  
 
-### Sustentabilidade  
+### 🔹 Sustentabilidade  
 A solução promove práticas ecológicas em consonância com políticas de cidades inteligentes.  
+
+<p align="center">
+  <img src="https://dummyimage.com/600x250/cccccc/000000.png&text=Exemplo+-+Coletor+Sensorizado" alt="Exemplo coletor sensor"/>
+</p>  
 
 ---
 
 ## 4. Tecnologias Utilizadas  
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,cpp,firebase,docker" />
+</p>  
 
 | **Camada**          | **Tecnologias**                                     |
 |----------------------|-----------------------------------------------------|
@@ -49,6 +71,7 @@ A solução promove práticas ecológicas em consonância com políticas de cida
 | **Infraestrutura**   | Docker/Podman · APIs REST                           |
 
 ---
+
 
 
 ## 5. Demonstrações  
