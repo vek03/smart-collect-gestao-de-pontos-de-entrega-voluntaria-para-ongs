@@ -7,7 +7,7 @@ A solução tem como objetivo **apoiar ONGs** no gerenciamento de pontos de cole
 
 ---
 
-## 🎯 Objetivo
+## 🎯 Objetivos
 
 O **SmartCollect IoT** busca tornar os Pontos de Entrega Voluntária mais **eficientes e transparentes**, permitindo:
 
@@ -167,6 +167,7 @@ SmartCollect-IoT/
 <p align="center">  
   <sub>© 2025 Smart Collect — Todos os direitos reservados</sub>  
 </p>
+
 
 
 
