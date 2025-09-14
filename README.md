@@ -125,12 +125,6 @@ SmartCollect-IoT/
 
 ## 👥 Colaboradores
 
-- **Gabriel da Silva Mendes** [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="16"/>](https://www.linkedin.com/in/victorncardoso/) [<img alt="image" src="https://github.com/user-attachments/assets/4612c60a-9113-4dba-9329-9d2cb7cf514f" width="16"/>](https://github.com/gabrielMendes21)
-   
-- **Juan Farias da Rocha** [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="16"/>](https://www.linkedin.com/in/gabrieldasilvamendes/) [<img alt="image" src="https://github.com/user-attachments/assets/4612c60a-9113-4dba-9329-9d2cb7cf514f" width="16"/>](https://github.com/juan9321)
-
-- **Victor Cardoso** [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="16"/>](https://www.linkedin.com/in/juan-farias-da-rocha/) [<img alt="image" src="https://github.com/user-attachments/assets/4612c60a-9113-4dba-9329-9d2cb7cf514f" width="16"/>](https://github.com/vek03)
-
 <div align="center">
 <table>
   <tr>
@@ -173,3 +167,4 @@ SmartCollect-IoT/
 <p align="center">  
   <sub>© 2025 Smart Collect — Todos os direitos reservados</sub>  
 </p>
+
