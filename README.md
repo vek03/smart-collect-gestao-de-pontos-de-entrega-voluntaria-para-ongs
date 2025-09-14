@@ -56,7 +56,7 @@ A branch do frontend que hospeda a UI está disponível no seguinte link:
 
 - C++
 - Arduino IDE ou PlatformIO  
-- Bibliotecas listadas em `libraries/libraries.txt`
+- Bibliotecas listadas em [libraries/libraries.txt](libraries/libraries.txt)
 - Todos os componentes eletrônicos
 
 ---
@@ -109,6 +109,7 @@ SmartCollect-IoT/
 ## 📜 Licença
 > Este projeto é distribuído sob a licença GPL-3.0. Consulte o arquivo [LICENCE](LICENSE.txt)
  para mais detalhes.
+
 
 
 
