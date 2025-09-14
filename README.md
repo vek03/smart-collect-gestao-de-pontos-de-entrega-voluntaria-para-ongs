@@ -50,6 +50,28 @@ O **SmartCollect IoT** busca tornar os Pontos de Entrega Voluntária mais **efic
 
 ---
 
+## 🧊 Case 3D
+
+> Case 3D feita no Tinkercad
+
+👉 [Acessar Tinkercad da Case 3D](https://www.tinkercad.com/things/0keOgNhEnew-smartcollect-10?sharecode=U8Y5dr6xEAFNGijWksgJZa3ci9BxK0j4eXwOnp7C59I)
+
+<div align="center">
+  <img src="circuit/case/SmartCollect 1.0.png" alt="Case 3D do SmartCollect" width="1000">
+</div>
+
+---
+
+## 📐 Esquemático dos Componentes
+
+> Esquemático dos componentes eletrônicos feito no Fritzing:
+
+<div align="center">
+  <img src="circuit/smart-collect-iot-esquematico.png" alt="Esquemático dos Componentes do SmartCollect" width="1000">
+</div>
+
+---
+
 ## 🌐 Frontend (UI)
 
 A branch do frontend que hospeda a UI está disponível no seguinte link:  
@@ -173,6 +195,7 @@ SmartCollect-IoT/
 <p align="center">  
   <sub>© 2025 Smart Collect — Todos os direitos reservados</sub>  
 </p>
+
 
 
 
