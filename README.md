@@ -1,16 +1,10 @@
 # Smart Collect  
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Licença-MIT-green?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Contribuições-Bem%20vindas-blue?style=for-the-badge"/>
-</p>
-
 ---
 
 ## 1. Introdução  
 
-O **Smart Collect** é uma solução tecnológica para o **gerenciamento inteligente de resíduos sólidos urbanos**.  
+O **Smart Collect** é uma solução tecnológica voltada ao **gerenciamento inteligente de resíduos sólidos urbanos**.  
 A plataforma integra **Internet das Coisas (IoT)**, **sensoriamento em tempo real** e **análise de dados**, promovendo práticas sustentáveis e reduzindo custos operacionais.  
 
 Este sistema foi desenvolvido como **Trabalho de Conclusão de Curso (TCC)** no curso de **Análise e Desenvolvimento de Sistemas** da **FATEC Zona Leste**.  
@@ -19,46 +13,43 @@ Este sistema foi desenvolvido como **Trabalho de Conclusão de Curso (TCC)** no 
 
 ## 2. Objetivos  
 
-O projeto tem como principais objetivos:  
+O projeto tem como metas principais:  
 
-- Implementar monitoramento contínuo dos níveis de resíduos por sensores IoT.  
-- Oferecer suporte à tomada de decisão por meio de dashboards analíticos.  
-- Otimizar rotas de coleta seletiva, reduzindo custos logísticos.  
-- Incentivar políticas de sustentabilidade em ambientes urbanos.  
+- **Monitoramento inteligente:** implementar sensores IoT para acompanhar continuamente os níveis de resíduos.  
+- **Apoio à decisão:** oferecer dashboards interativos com indicadores estratégicos.  
+- **Otimização logística:** reduzir custos operacionais com rotas de coleta mais eficientes.  
+- **Sustentabilidade urbana:** incentivar práticas alinhadas ao conceito de **Smart Cities**.  
 
 ---
 
 ## 3. Funcionalidades  
 
-**Monitoramento em tempo real**  
-Sensores ultrassônicos instalados nos coletores acompanham os níveis de resíduos continuamente.  
+### Monitoramento em tempo real  
+Sensores ultrassônicos instalados nos coletores acompanham continuamente o nível de resíduos.  
 
-**Dashboard interativo**  
-Interface web para visualização de indicadores, relatórios de desempenho e gráficos comparativos.  
+### Dashboard interativo  
+Interface web para exibição de indicadores, relatórios e gráficos comparativos.  
 
-**Notificações inteligentes**  
-O sistema emite alertas automáticos quando a coleta é necessária, evitando deslocamentos desnecessários.  
+### Notificações inteligentes  
+Alertas automáticos são enviados quando a coleta é necessária, evitando deslocamentos desnecessários.  
 
-**Sustentabilidade**  
-Incentivo a práticas ecológicas alinhadas aos princípios de **Smart Cities**.  
+### Sustentabilidade  
+A solução promove práticas ecológicas em consonância com políticas de cidades inteligentes.  
 
 ---
 
 ## 4. Tecnologias Utilizadas  
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,cpp,firebase,docker" />
-</p>  
-
-| Camada              | Tecnologias Utilizadas                              |
-|---------------------|-----------------------------------------------------|
-| **Front-end**       | HTML, CSS, JavaScript, React.js                     |
-| **Back-end**        | Node.js, C++                                        |
-| **Banco de Dados**  | Firebase (armazenamento em tempo real)              |
-| **IoT**             | Sensores ultrassônicos, microcontrolador ESP32      |
-| **Infraestrutura**  | Docker/Podman, APIs REST para comunicação           |
+| **Camada**          | **Tecnologias**                                     |
+|----------------------|-----------------------------------------------------|
+| **Front-end**        | HTML · CSS · JavaScript · React.js                  |
+| **Back-end**         | Node.js · C++                                       |
+| **Banco de Dados**   | Firebase (armazenamento em tempo real)              |
+| **IoT**              | Sensores ultrassônicos · Microcontrolador ESP32     |
+| **Infraestrutura**   | Docker/Podman · APIs REST                           |
 
 ---
+
 
 ## 5. Demonstrações  
 
