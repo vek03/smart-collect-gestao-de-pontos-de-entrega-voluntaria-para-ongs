@@ -60,7 +60,6 @@ A solução promove práticas ecológicas em consonância com políticas de cida
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,cpp,firebase,docker" />
-</p>  
 
 | **Camada**          | **Tecnologias**                                     |
 |----------------------|-----------------------------------------------------|
@@ -70,8 +69,10 @@ A solução promove práticas ecológicas em consonância com políticas de cida
 | **IoT**              | Sensores ultrassônicos · Microcontrolador ESP32     |
 | **Infraestrutura**   | Docker/Podman · APIs REST                           |
 
----
+</p>  
 
+
+---
 
 
 ## 5. Demonstrações  
@@ -96,11 +97,6 @@ Exemplo de protótipo de dashboard:
 
 ---
 
-## 7. Licença  
-
-Este projeto está licenciado sob a licença **MIT**. Consulte o arquivo `LICENSE` para mais informações.  
-
----
 
 <p align="center">  
   <sub>© 2025 Smart Collect — Todos os direitos reservados</sub>  
