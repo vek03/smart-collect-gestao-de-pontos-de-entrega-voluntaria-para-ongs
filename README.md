@@ -84,7 +84,7 @@ A branch do frontend que hospeda a UI está disponível no seguinte link:
 
 - Leitura da distância por sensores ultrassônicos  
 - Cálculo da **porcentagem de preenchimento** dos coletores  
-- Exibição em tempo real no **Display OLED**  
+- Exibição em tempo real no **Display LCD**  
 - Envio dos dados para o **Firebase Realtime Database**  
 - Preparado para integração com o **painel web das ONGs**  
 
@@ -195,6 +195,7 @@ SmartCollect-IoT/
 <p align="center">  
   <sub>© 2025 Smart Collect — Todos os direitos reservados</sub>  
 </p>
+
 
 
 
