@@ -56,7 +56,7 @@ A solução promove práticas ecológicas em consonância com políticas de cida
 <div align="center">
   <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,cpp,firebase,docker" />
   
-  <br>
+  <br><br>
 
   | **Camada**          | **Tecnologias**                                     |
   |----------------------|-----------------------------------------------------|
@@ -83,16 +83,33 @@ Exemplo de protótipo de dashboard:
 
 <br>
 
-## Equipe de Desenvolvimento  
+##  Equipe de Desenvolvimento  
 
-- **Gabriel da Silva Mendes**  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/gabrieldasilvamendes)
-
-- **Juan Farias da Rocha**  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/juan-farias-da-rocha)
-
-- **Victor Novaes Cardoso**  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/victorncardoso)
+<table>
+  <tr>
+    <td align="center" width="200">
+      <img src="COLE_AQUI_IMAGEM_GABRIEL" width="100px" style="border-radius:50%;" alt="Gabriel da Silva Mendes"/><br/>
+      <b>Gabriel da Silva Mendes</b><br/>
+      <a href="https://www.linkedin.com/in/gabrieldasilvamendes">
+        <img src="https://img.shields.io/badge/LinkedIn-Perfil-blue?style=flat-square&logo=linkedin" />
+      </a>
+    </td>
+    <td align="center" width="200">
+      <img src="COLE_AQUI_IMAGEM_JUAN" width="100px" style="border-radius:50%;" alt="Juan Farias da Rocha"/><br/>
+      <b>Juan Farias da Rocha</b><br/>
+      <a href="https://www.linkedin.com/in/juan-farias-da-rocha">
+        <img src="https://img.shields.io/badge/LinkedIn-Perfil-blue?style=flat-square&logo=linkedin" />
+      </a>
+    </td>
+    <td align="center" width="200">
+      <img src="COLE_AQUI_IMAGEM_VICTOR" width="100px" style="border-radius:50%;" alt="Victor Novaes Cardoso"/><br/>
+      <b>Victor Novaes Cardoso</b><br/>
+      <a href="https://www.linkedin.com/in/victorncardoso">
+        <img src="https://img.shields.io/badge/LinkedIn-Perfil-blue?style=flat-square&logo=linkedin" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 <br>
 
