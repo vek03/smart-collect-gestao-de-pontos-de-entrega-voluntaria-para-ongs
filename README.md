@@ -1,7 +1,7 @@
 # <img src="assets/logo_horizontal.png" alt="Logo do SmartCollect" width="600">
 
 Projeto Integrador desenvolvido para implementar um **Ponto de Entrega Voluntária Inteligente (PEV)**.  
-O sistema utiliza sensores ultrassônicos e um ESP32 para medir a porcentagem de preenchimento de coletores, exibindo os dados em um display OLED e enviando-os em tempo real para o **Firebase Realtime Database**.  
+O sistema utiliza sensores ultrassônicos e um ESP32 para medir a porcentagem de preenchimento de coletores, exibindo os dados em um display LCD e enviando-os em tempo real para o **Firebase Realtime Database**.  
 
 A solução tem como objetivo **apoiar ONGs** no gerenciamento de pontos de coleta, ao mesmo tempo em que engaja doadores, permitindo que verifiquem se os pontos estão ativos e recebendo doações.
 
@@ -36,10 +36,8 @@ O **SmartCollect IoT** busca tornar os Pontos de Entrega Voluntária mais **efic
 
 ## 🖥️ Tecnologias Utilizadas 
 
-<div align="left">
+<div align="center">
   <img src="https://skillicons.dev/icons?i=cpp,firebase,arduino,git,github"/>
-
-  <br><br>
 
 | **Camada**           | **Tecnologias**                                     |
 |----------------------|-----------------------------------------------------|
@@ -49,6 +47,28 @@ O **SmartCollect IoT** busca tornar os Pontos de Entrega Voluntária mais **efic
 | **Versionamento**    | Git · GitHub                                        |
 
 </div>  
+
+---
+
+## 🧊 Case 3D
+
+> Case 3D feita no Tinkercad
+
+👉 [Acessar Tinkercad da Case 3D](https://www.tinkercad.com/things/0keOgNhEnew-smartcollect-10?sharecode=U8Y5dr6xEAFNGijWksgJZa3ci9BxK0j4eXwOnp7C59I)
+
+<div align="center">
+  <img src="circuit/case/SmartCollect 1.0.png" alt="Case 3D do SmartCollect" width="1000">
+</div>
+
+---
+
+## 📐 Esquemático dos Componentes
+
+> Esquemático dos componentes eletrônicos feito no Fritzing:
+
+<div align="center">
+  <img src="circuit/smart-collect-iot-esquematico.png" alt="Esquemático dos Componentes do SmartCollect" width="1000">
+</div>
 
 ---
 
@@ -64,7 +84,7 @@ A branch do frontend que hospeda a UI está disponível no seguinte link:
 
 - Leitura da distância por sensores ultrassônicos  
 - Cálculo da **porcentagem de preenchimento** dos coletores  
-- Exibição em tempo real no **Display OLED**  
+- Exibição em tempo real no **Display LCD**  
 - Envio dos dados para o **Firebase Realtime Database**  
 - Preparado para integração com o **painel web das ONGs**  
 
@@ -175,6 +195,10 @@ SmartCollect-IoT/
 <p align="center">  
   <sub>© 2025 Smart Collect — Todos os direitos reservados</sub>  
 </p>
+
+
+
+
 
 
 
