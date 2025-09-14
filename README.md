@@ -55,6 +55,8 @@ A solução promove práticas ecológicas em consonância com políticas de cida
 ## 4. Tecnologias Utilizadas  
 <div align="center">
   <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,cpp,firebase,docker" />
+  
+  <br>
 
   | **Camada**          | **Tecnologias**                                     |
   |----------------------|-----------------------------------------------------|
@@ -70,11 +72,10 @@ A solução promove práticas ecológicas em consonância com políticas de cida
 
 ## 5. Demonstrações  
 
+Exemplo de protótipo de dashboard:  
 <p align="center">
   <img src="https://img.shields.io/badge/Demo-Em%20Breve-lightgrey?style=for-the-badge"/>
 </p>  
-
-Exemplo de protótipo de dashboard:  
 
 <p align="center">
   <img src="https://dummyimage.com/700x400/cccccc/000000.png&text=Exemplo+Dashboard" alt="Exemplo Dashboard"/>
@@ -82,11 +83,16 @@ Exemplo de protótipo de dashboard:
 
 <br>
 
-## 6. Equipe de Desenvolvimento  
+## Equipe de Desenvolvimento  
 
-- Gabriel da Silva Mendes — [LinkedIn](https://www.linkedin.com/in/gabrieldasilvamendes)  
-- Juan Farias da Rocha — [LinkedIn](https://www.linkedin.com/in/juan-farias-da-rocha)  
-- Victor Novaes Cardoso — [LinkedIn](https://www.linkedin.com/in/victorncardoso)  
+- **Gabriel da Silva Mendes**  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/gabrieldasilvamendes)
+
+- **Juan Farias da Rocha**  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/juan-farias-da-rocha)
+
+- **Victor Novaes Cardoso**  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/victorncardoso)
 
 <br>
 
