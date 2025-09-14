@@ -64,7 +64,7 @@ A solução promove práticas ecológicas em consonância com políticas de cida
 | **Camada**          | **Tecnologias**                                     |
 |----------------------|-----------------------------------------------------|
 | **Front-end**        | HTML · CSS · JavaScript · React.js                  |
-| **Back-end**         | Node.js · C++                                       |
+| **Back-end**         | C++                                                 |
 | **Banco de Dados**   | Firebase (armazenamento em tempo real)              |
 | **IoT**              | Sensores ultrassônicos · Microcontrolador ESP32     |
 | **Infraestrutura**   | Docker/Podman · APIs REST                           |
