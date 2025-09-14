@@ -141,7 +141,7 @@ smart-collect-ui/
     <td align="center" width="200">
       <img src="https://github.com/user-attachments/assets/c5cf0acd-8137-43b2-a02c-5d395ddd17fe" width="100px" style="border-radius:50%;" alt="Gabriel Mendes"/><br/>
       <b>Gabriel Mendes</b><br/>
-      <a href="https://www.linkedin.com/in/victorncardoso/">
+      <a href="https://www.linkedin.com/in/gabrieldasilvamendes/">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="20"/>
       </a>
       <a href="https://github.com/gabrielMendes21">
