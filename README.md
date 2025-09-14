@@ -34,6 +34,16 @@ O **SmartCollect IoT** busca tornar os Pontos de Entrega Voluntária mais **efic
 
 ---
 
+## 🌐 Frontend (UI)
+
+A branch do frontend que hospeda a UI está disponível no seguinte link:  
+
+👉 [Acessar Branch do Frontend](https://github.com/fatec-zona-leste/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/main)
+
+---
+
+---
+
 ## 🚀 Funcionalidades
 
 - Leitura da distância por sensores ultrassônicos  
@@ -41,6 +51,15 @@ O **SmartCollect IoT** busca tornar os Pontos de Entrega Voluntária mais **efic
 - Exibição em tempo real no **Display OLED**  
 - Envio dos dados para o **Firebase Realtime Database**  
 - Preparado para integração com o **painel web das ONGs**  
+
+---
+
+## 🛠️ Requisitos
+
+- C++
+- Arduino IDE ou PlatformIO  
+- Bibliotecas listadas em `libraries/libraries.txt`
+- Todos os componentes eletrônicos
 
 ---
 
@@ -90,5 +109,6 @@ SmartCollect-IoT/
 ---
 
 ## 📜 Licença
-> Este projeto é distribuído sob a licença MIT. Consulte o arquivo LICENSE
+> Este projeto é distribuído sob a licença GPL-3.0. Consulte o arquivo [LICENCE](LICENSE)
  para mais detalhes.
+
