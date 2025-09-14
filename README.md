@@ -84,6 +84,7 @@ A branch do frontend que hospeda a UI está disponível no seguinte link:
 ```bash
 SmartCollect-IoT/
 │
+├── assets/                   # Contém todas as logos e ícones do SmartCollect
 ├── circuit/                  # Contém arquivos Fritzing e diagramas de todos os componentes eletrônicos
 ├── examples/                 # Arquivos de teste para cada Função do projeto
 ├── libraries/                # Bibliotecas externas utilizadas
@@ -167,6 +168,7 @@ SmartCollect-IoT/
 <p align="center">  
   <sub>© 2025 Smart Collect — Todos os direitos reservados</sub>  
 </p>
+
 
 
 
