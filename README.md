@@ -36,10 +36,8 @@ O **SmartCollect IoT** busca tornar os Pontos de Entrega Voluntária mais **efic
 
 ## 🖥️ Tecnologias Utilizadas 
 
-<div align="left">
+<div align="center">
   <img src="https://skillicons.dev/icons?i=cpp,firebase,arduino,git,github"/>
-
-  <br><br>
 
 | **Camada**           | **Tecnologias**                                     |
 |----------------------|-----------------------------------------------------|
@@ -175,6 +173,7 @@ SmartCollect-IoT/
 <p align="center">  
   <sub>© 2025 Smart Collect — Todos os direitos reservados</sub>  
 </p>
+
 
 
 
