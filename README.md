@@ -7,6 +7,23 @@ A solução tem como objetivo **apoiar ONGs** no gerenciamento de pontos de cole
 
 ---
 
+## 🎯 Objetivo
+
+O **SmartCollect IoT** busca tornar os Pontos de Entrega Voluntária mais **eficientes e transparentes**, permitindo:
+
+- 📊 Monitoramento em tempo real da **ocupação dos coletores**  
+- 🌍 Integração com uma **Plataforma Web** para gestão dos pontos pelas ONGs  
+- 🙌 Engajamento dos doadores, que podem visualizar pontos ativos e em funcionamento  
+
+---
+
+## 👨‍👩‍👧‍👦 Público-Alvo
+- ONGs → Gerenciar pontos de coleta com mais eficiência
+- Doadores → Acompanhar a atividade dos pontos em tempo real
+- Comunidade → Incentivo à cultura de doação e reaproveitamento
+
+---
+
 ## 🔧 Peças Utilizadas
 
 - **ESP32** – Microcontrolador principal (Wi-Fi integrado)  
@@ -32,16 +49,6 @@ A solução tem como objetivo **apoiar ONGs** no gerenciamento de pontos de cole
 | **Versionamento**    | Git · GitHub                                        |
 
 </div>  
-
----
-
-## 🎯 Objetivo
-
-O **SmartCollect IoT** busca tornar os Pontos de Entrega Voluntária mais **eficientes e transparentes**, permitindo:
-
-- 📊 Monitoramento em tempo real da **ocupação dos coletores**  
-- 🌍 Integração com uma **Plataforma Web** para gestão dos pontos pelas ONGs  
-- 🙌 Engajamento dos doadores, que podem visualizar pontos ativos e em funcionamento  
 
 ---
 
@@ -105,13 +112,6 @@ SmartCollect-IoT/
 
 ---
 
-## 👨‍👩‍👧‍👦 Público-Alvo
-- ONGs → Gerenciar pontos de coleta com mais eficiência
-- Doadores → Acompanhar a atividade dos pontos em tempo real
-- Comunidade → Incentivo à cultura de doação e reaproveitamento
-
----
-
 ## 📌 Status do Projeto
 > 🚧 Em desenvolvimento – Versão inicial do firmware do IoT
 
@@ -130,3 +130,4 @@ SmartCollect-IoT/
 - **Juan Farias da Rocha** [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="16"/>](https://www.linkedin.com/in/gabrieldasilvamendes/) [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="16"/>](https://github.com/juan9321)
 
 - **Victor Cardoso** [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="16"/>](https://www.linkedin.com/in/juan-farias-da-rocha/) [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="16"/>](https://github.com/vek03)
+
