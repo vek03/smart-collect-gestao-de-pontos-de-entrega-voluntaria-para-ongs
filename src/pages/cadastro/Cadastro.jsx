@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { register } from '../../utils/auth.js'; 
-import styles from '../login/Login.module.css';
+import styles from './Cadastro.module.css';
 
 export default function Cadastro() {
   const [email, setEmail] = useState('');
@@ -13,7 +13,6 @@ export default function Cadastro() {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-
 
     if (!email || !password || !confirmPassword) {
       setError('Por favor, preencha todos os campos.');
@@ -64,44 +63,46 @@ export default function Cadastro() {
   };
 
   return (
-    <div className={styles.loginContainer}>
-      <h2>Crie sua conta</h2>
-      <form onSubmit={handleRegister}>
-        <div className={styles.inputGroup}>
-          <label>Email</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Digite seu e-mail"
-          />
-        </div>
+    <div className={styles.registerPageContainer}>
+      <div className={styles.loginContainer}>
+        <h2>Crie sua conta</h2>
+        <form onSubmit={handleRegister}>
+          <div className={styles.inputGroup}>
+            <label>Email</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Digite seu e-mail"
+            />
+          </div>
 
-        <div className={styles.inputGroup}>
-          <label>Senha</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Digite sua senha"
-          />
-        </div>
+          <div className={styles.inputGroup}>
+            <label>Senha</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Digite sua senha"
+            />
+          </div>
 
-        <div className={styles.inputGroup}>
-          <label>Confirme a senha</label>
-          <input
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            placeholder="Confirme sua senha"
-          />
-        </div>
+          <div className={styles.inputGroup}>
+            <label>Confirme a senha</label>
+            <input
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              placeholder="Confirme sua senha"
+            />
+          </div>
 
-        {error && <div className={styles.error}>{error}</div>}
+          {error && <div className={styles.error}>{error}</div>}
 
-        <button type="submit" className={styles.loginButton}>Registrar</button>
-        <span>Já tem conta? <Link to="/login">Login</Link></span>
-      </form>
+          <button type="submit" className={styles.loginButton}>Registrar</button>
+          <span>Já tem conta? <Link to="/login">Login</Link></span>
+        </form>
+      </div>
     </div>
   );
 }

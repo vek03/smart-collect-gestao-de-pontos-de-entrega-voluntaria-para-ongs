@@ -1,3 +1,8 @@
+img{
+    width: 100px; 
+  height: 100px; 
+}
+
 .link {
     text-decoration: none;
     color: black;
@@ -5,10 +10,12 @@
 
 .logoGreenColor {
     color: #19a352;
+    font-size: 2rem;
 }
 
 .logoBlueColor {
     color: #003366;
+    font-size: 2rem;
 }
 
 .flex {

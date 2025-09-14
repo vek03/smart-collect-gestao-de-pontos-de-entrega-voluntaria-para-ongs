@@ -1,69 +1,74 @@
 /* Reset básico */
 * {
   margin: 0;
-  padding: 0;
+  padding: 0 ;
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #f6f7fb;
-  color: #333;
+  font-family: "IBM Plex Sans", "Inter", Arial, sans-serif;
+  background-color: #ffffff; /* mantém o fundo branco */
+  color: #1e1e1e;
+   padding: 0 !important;
+  scroll-behavior: smooth;
 }
 
 .container {
   width: min(1120px, 90%);
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 /* Seção de Introdução */
 .intro {
-  background: url("https://via.placeholder.com/1600x900") no-repeat center
-    center/cover;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0 20px;
+  background: linear-gradient(135deg, #f6fff7 0%, #ffffff 100%);
 }
 
 .intro h1 {
   font-size: clamp(36px, 6vw, 60px);
   margin-bottom: 20px;
   font-weight: 700;
+  color: #14532d;
 }
 
 .intro p {
-  font-size: clamp(16px, 2.5vw, 24px);
+  font-size: clamp(16px, 2.5vw, 22px);
   margin-bottom: 30px;
+  color: #2c2c2c;
 }
 
 .cta-button {
-  background: linear-gradient(90deg, #003366, #24496f);
+  background: linear-gradient(90deg, #27ae60, #2ecc71);
   color: white;
   font-size: clamp(16px, 2.5vw, 22px);
   padding: 14px 36px;
   border: none;
   cursor: pointer;
   text-decoration: none;
-  border-radius: 10px;
-  transition: transform 0.05s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
 }
 
 .cta-button:hover {
   opacity: 0.95;
+  box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
 }
 
 .cta-button:active {
-  transform: translateY(1px);
+  transform: translateY(2px);
 }
 
 /* Seções principais */
 .section {
-  padding: 80px 0;
+  padding: 100px 0;
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateY(50px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
@@ -72,39 +77,50 @@ body {
   transform: translateY(0);
 }
 
-/* Sobre o Smart Collect */
+/* Sobre */
 .about {
-  background-color: #fff;
   text-align: center;
+  padding: 80px 20px;
 }
 
 .about h2 {
   margin-bottom: 30px;
   font-size: 36px;
+  color: #14532d;
 }
 
-.about img {
+.about p {
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 18px;
+  color: #2c2c2c;
+}
+
+.about-img {
   max-width: 100%;
   height: auto;
   margin-top: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 /* Características */
 .features {
-  background-color: #f8f9fe;
+  background-color: #f6fff7; /* tom suave análogo ao verde */
+  padding: 100px 20px;
 }
 
 .features h2 {
   font-size: 36px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  color: #14532d;
 }
 
 .features-list {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -112,89 +128,124 @@ body {
 .feature {
   width: min(320px, 90%);
   text-align: center;
-  background: #fff;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
 }
 
 .feature h3 {
   font-size: 22px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
+  color: #27ae60;
 }
 
 .feature p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
+  color: #2c2c2c;
 }
 
 /* Depoimentos */
 .testimonials {
-  background-color: #eef1ff;
-  padding: 50px 0;
+  background-color: #e3f7e6; /* outro tom verde análogo suave */
+  padding: 80px 20px;
+}
+
+.testimonials h2 {
+  color: #14532d;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .testimonial-slider {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .testimonial {
-  margin-bottom: 10px;
+  max-width: 700px;
   font-style: italic;
   font-size: 18px;
-  max-width: 700px;
-  background: #fff;
-  padding: 20px 24px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-3px);
 }
 
 .testimonial span {
   margin-top: 10px;
-  font-weight: bold;
+  font-weight: 700;
   display: block;
+  color: #27ae60;
 }
 
 /* Formulário de Contato */
+.contact {
+  padding: 100px 20px;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #14532d;
+}
+
 .contact form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 
 .contact input,
 .contact textarea {
   width: 100%;
-  padding: 14px;
-  margin: 10px 0;
+  max-width: 600px;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #c7e7d9;
   font-size: 16px;
-  border: 1px solid #dcdde1;
-  border-radius: 10px;
-  background: #fff;
+  background: #f9fff9;
+  transition: border 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #27ae60;
+  outline: none;
 }
 
 .contact button {
-  background: linear-gradient(90deg, #ff7a59, #ff6347);
+  background: linear-gradient(90deg, #27ae60, #2ecc71);
   color: white;
-  padding: 14px 30px;
+  padding: 14px 36px;
   border: none;
   font-size: 18px;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 8px 18px rgba(255, 99, 71, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .contact button:hover {
-  opacity: 0.95;
+  box-shadow: 0 8px 20px rgba(39, 174, 96, 0.35);
 }
 
 .contact button:active {
-  transform: translateY(1px);
+  transform: translateY(2px);
 }
 
 .login-section {
@@ -202,4 +253,13 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.login-section p {
+  font-weight: 500;
+}
+
+.login-section a {
+  color: white;
+  text-decoration: none;
 }

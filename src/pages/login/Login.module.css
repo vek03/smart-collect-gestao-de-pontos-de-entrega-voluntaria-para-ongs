@@ -5,14 +5,14 @@
   box-sizing: border-box;
 }
 
-/* Estilo do fundo da página */
-body {
-  background-color: #fff;
+/* Container específico da página de login */
+.loginPageContainer {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 24px;
+  background-color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
@@ -22,7 +22,7 @@ body {
   padding: 40px 32px;
   border-radius: 14px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  width: 100vw;
+  width: 100%;
   max-width: 420px;
   border: 1px solid black;
   backdrop-filter: blur(2px);

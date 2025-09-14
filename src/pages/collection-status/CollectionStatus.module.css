@@ -1,30 +1,40 @@
 .container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #66eaa6 0%, #19a352 100%);
+  background: linear-gradient(135deg, #fdfdfd63 0%, #f4faf742 100%);
   display: flex;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
 }
 
+/* Header */
 .header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  padding: 18px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 999;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(2px);
 }
 
 .header h1 {
-  color: white;
+  color: #000;
   font-size: 28px;
   font-weight: 700;
 }
 
+.headerActions button {
+  margin-left: 10px;
+}
+
 .logoutButton {
   background: rgba(255, 255, 255, 0.2);
-  color: white;
+  color: rgb(2, 56, 10);
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 8px 18px;
   border-radius: 10px;
@@ -52,7 +62,7 @@
   padding: 40px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   text-align: center;
-  max-width: 500px;
+  max-width: 700px;
   width: 100%;
   animation: slideUp 0.6s ease-out;
 }
@@ -74,6 +84,8 @@
 }
 
 .percentageFill {
+  fill: none;
+  stroke: #209e00;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -82,8 +94,11 @@
 }
 
 .circleProgress {
+  fill: none;
+  stroke: #209e00;
   transition: stroke-dasharray 0.8s ease;
 }
+
 
 .percentageText {
   position: relative;
@@ -103,7 +118,7 @@
 .percentageNumber {
   font-size: 36px;
   font-weight: 700;
-  color: #4e54c8;
+  color: #209e00;
   line-height: 1;
   margin-bottom: 4px;
 }

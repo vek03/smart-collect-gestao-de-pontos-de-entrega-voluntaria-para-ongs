@@ -25,21 +25,23 @@ export default function Login() {
   };
 
   return (
-    <div className={styles.loginContainer}>
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        <div className={styles.inputGroup}>
-          <label>Email</label>
-          <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Digite seu e-mail"/>
-        </div>
-        <div className={styles.inputGroup}>
-          <label>Senha</label>
-          <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Digite sua senha"/>
-        </div>
-        {error && <div className={styles.error}>{error}</div>}
-        <button type="submit" className={styles.loginButton}>Entrar</button>
-        <span>Não tem conta? <Link to="/register">Crie uma conta</Link></span>
-      </form>
+    <div className={styles.loginPageContainer}>
+      <div className={styles.loginContainer}>
+        <h2>Login</h2>
+        <form onSubmit={handleLogin}>
+          <div className={styles.inputGroup}>
+            <label>Email</label>
+            <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Digite seu e-mail"/>
+          </div>
+          <div className={styles.inputGroup}>
+            <label>Senha</label>
+            <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Digite sua senha"/>
+          </div>
+          {error && <div className={styles.error}>{error}</div>}
+          <button type="submit" className={styles.loginButton}>Entrar</button>
+          <span>Não tem conta? <Link to="/register">Crie uma conta</Link></span>
+        </form>
+      </div>
     </div>
   );
 }

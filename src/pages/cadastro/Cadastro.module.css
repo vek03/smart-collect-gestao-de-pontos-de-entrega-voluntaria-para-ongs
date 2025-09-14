@@ -1,60 +1,106 @@
-.loginContainer {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 30px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container específico da página de cadastro */
+.registerPageContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background-color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
+/* Card do cadastro */
+.loginContainer {
+  max-width: 420px;
+  width: 100%;
+  padding: 40px 32px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border: 1px solid black;
+}
+
+/* Título */
 .loginContainer h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #333;
 }
 
+/* Formulário em coluna */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grupo de inputs */
 .inputGroup {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   display: flex;
   flex-direction: column;
 }
 
 .inputGroup label {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   color: #555;
+  font-weight: 600;
 }
 
 .inputGroup input {
-  padding: 10px;
-  border-radius: 6px;
+  padding: 12px 14px;
+  border-radius: 10px;
   border: 1px solid #ccc;
-  font-size: 16px;
+  font-size: 14px;
+  background: #fafbff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
+.inputGroup input:focus {
+  outline: none;
+  border-color: #66eaa6;
+  box-shadow: 0 0 0 4px rgba(78, 200, 119, 0.35);
+  background: #fff;
+}
+
+/* Botão */
 .loginButton {
   width: 100%;
   padding: 12px;
-  margin-top: 10px;
-  background-color: #4e54c8;
+  margin-top: 8px;
+  background: linear-gradient(90deg, #66eaa6, #19a352);
+  color: white;
   border: none;
-  border-radius: 6px;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
+  border-radius: 10px;
   font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.05s ease, box-shadow 0.2s ease, opacity 0.2s ease;
 }
 
 .loginButton:hover {
-  background-color: #3b40a0;
+  opacity: 0.95;
 }
 
+.loginButton:active {
+  transform: translateY(1px);
+}
+
+/* Erro */
 .error {
-  color: #d9534f;
-  margin-bottom: 10px;
+  color: #e74c3c;
+  margin-top: 12px;
+  font-size: 14px;
   text-align: center;
 }
 
+/* Link */
 span {
   display: block;
   text-align: center;
@@ -63,9 +109,9 @@ span {
 }
 
 span a {
-  color: #4e54c8;
+  color: #66eaa6;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 span a:hover {
