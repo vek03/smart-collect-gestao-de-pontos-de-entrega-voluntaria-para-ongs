@@ -1,4 +1,4 @@
-# 📦 SmartCollect IoT
+# <img src="assets/logo_horizontal.png" alt="Logo do SmartCollect" width="200">
 
 Projeto Integrador desenvolvido para implementar um **Ponto de Entrega Voluntária Inteligente (PEV)**.  
 O sistema utiliza sensores ultrassônicos e um ESP32 para medir a porcentagem de preenchimento de coletores, exibindo os dados em um display OLED e enviando-os em tempo real para o **Firebase Realtime Database**.  
@@ -168,6 +168,7 @@ SmartCollect-IoT/
 <p align="center">  
   <sub>© 2025 Smart Collect — Todos os direitos reservados</sub>  
 </p>
+
 
 
 
