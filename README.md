@@ -56,7 +56,7 @@ A solução promove práticas ecológicas em consonância com políticas de cida
 <div align="center">
   <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,cpp,firebase,docker" />
   
-  <br><br>
+  <br>
 
   | **Camada**          | **Tecnologias**                                     |
   |----------------------|-----------------------------------------------------|
@@ -84,25 +84,25 @@ Exemplo de protótipo de dashboard:
 <br>
 
 ##  Equipe de Desenvolvimento  
-
+<div align="center">
 <table>
   <tr>
     <td align="center" width="200">
-      <img src="COLE_AQUI_IMAGEM_GABRIEL" width="100px" style="border-radius:50%;" alt="Gabriel da Silva Mendes"/><br/>
+      <img src="https://github.com/user-attachments/assets/c5cf0acd-8137-43b2-a02c-5d395ddd17fe" width="100px" style="border-radius:50%;" alt="Gabriel da Silva Mendes"/><br/>
       <b>Gabriel da Silva Mendes</b><br/>
       <a href="https://www.linkedin.com/in/gabrieldasilvamendes">
         <img src="https://img.shields.io/badge/LinkedIn-Perfil-blue?style=flat-square&logo=linkedin" />
       </a>
     </td>
     <td align="center" width="200">
-      <img src="COLE_AQUI_IMAGEM_JUAN" width="100px" style="border-radius:50%;" alt="Juan Farias da Rocha"/><br/>
+      <img src="https://github.com/user-attachments/assets/a3fefd4c-f6eb-4a3f-8c0c-e26e2524886e" width="100px" style="border-radius:50%;" alt="Juan Farias da Rocha"/><br/>
       <b>Juan Farias da Rocha</b><br/>
       <a href="https://www.linkedin.com/in/juan-farias-da-rocha">
         <img src="https://img.shields.io/badge/LinkedIn-Perfil-blue?style=flat-square&logo=linkedin" />
       </a>
     </td>
     <td align="center" width="200">
-      <img src="COLE_AQUI_IMAGEM_VICTOR" width="100px" style="border-radius:50%;" alt="Victor Novaes Cardoso"/><br/>
+      <img src="https://github.com/user-attachments/assets/02531667-4b8a-40be-a1ec-fe5af32bf976" width="100px" style="border-radius:50%;" alt="Victor Novaes Cardoso"/><br/>
       <b>Victor Novaes Cardoso</b><br/>
       <a href="https://www.linkedin.com/in/victorncardoso">
         <img src="https://img.shields.io/badge/LinkedIn-Perfil-blue?style=flat-square&logo=linkedin" />
@@ -110,6 +110,7 @@ Exemplo de protótipo de dashboard:
     </td>
   </tr>
 </table>
+</div>
 
 <br>
 
