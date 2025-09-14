@@ -6,7 +6,6 @@ void WifiManager::begin(const char* ssid, const char* pass) {
   Serial.print("[WiFi] Conectando a ");
   Serial.println(ssid);
 
-  // Espera básica por conexão
   int tries = 0;
   while (WiFi.status() != WL_CONNECTED && tries < 50) {
     delay(200);
@@ -29,5 +28,4 @@ bool WifiManager::isConnected() const {
 
 void WifiManager::loop() {
   // espaço para lógica de reconexão se quiser
-  // por ora apenas um placeholder
 }

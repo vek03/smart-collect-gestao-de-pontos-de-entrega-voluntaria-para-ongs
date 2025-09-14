@@ -12,7 +12,7 @@ void LcdDisplay::begin() {
 void LcdDisplay::printLine(uint8_t row, const String& text) {
   if (row >= _rows) return;
   String padded = text;
-  // garante limpar o restante da linha
+  
   while (padded.length() < _cols) padded += ' ';
   _lcd.setCursor(0, row);
   _lcd.print(padded.substring(0, _cols));

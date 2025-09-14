@@ -46,15 +46,13 @@ void setup() {
 }
 
 void loop() {
-  // OTA sempre rodando
   ota.handle();
   wifi.loop();
 
-  // Faz leituras com mitigação de crosstalk: lê A -> espera -> lê B
   static float distA = NAN, distB = NAN, distC = NAN;
 
-  // atualiza display de tempos em tempos
   unsigned long now = millis();
+
   if (now - lastUpdateMs >= DISPLAY_INTERVAL_MS) {
     distA = sensorA.readCm(ULTRA_SAMPLES, ULTRA_SAMPLE_INTERVAL_MS);
     delay(INTER_SENSOR_DELAY_MS);

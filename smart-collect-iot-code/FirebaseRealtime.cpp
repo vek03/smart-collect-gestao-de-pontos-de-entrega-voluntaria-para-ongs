@@ -15,20 +15,16 @@ int FirebaseRealtime::sendValues(float averageCm, bool isFull){
 }
 
 int FirebaseRealtime::sendJson(){
-  // Create a string to hold the serialized JSON data
   String output;
 
-  // Optional: Shrink the JSON document to fit its contents exactly
   _json.shrinkToFit();
 
-  // Serialize the JSON document to a string
   serializeJson(_json, output);
 
   Serial.println("JSON data created:");
   Serial.println(output);
   Serial.println();
 
-  // Set the serialized JSON data in Firebase
   Serial.println("Sending JSON to Firebase...");
   int responseCode = _fb.setJson(_deviceId, output);
   Serial.print("Set JSON - Response Code: ");
