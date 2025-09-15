@@ -1,3 +1,6 @@
+/* CollectionStatus.module.css */
+
+/* Container principal */
 .container {
   min-height: 100vh;
   background: linear-gradient(135deg, #fdfdfd63 0%, #f4faf742 100%);
@@ -6,7 +9,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Header */
+/* Header unificado */
 .header {
   top: 0;
   left: 0;
@@ -22,17 +25,26 @@
   backdrop-filter: blur(2px);
 }
 
-.header h1 {
+.headerTitle {
   color: #000;
   font-size: 28px;
   font-weight: 700;
+  cursor: pointer;
 }
 
-.headerActions button {
-  margin-left: 10px;
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.logoutButton {
+/* Botões do header */
+.logoutButton,
+.profileLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   background: rgba(255, 255, 255, 0.2);
   color: rgb(2, 56, 10);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -40,14 +52,18 @@
   border-radius: 10px;
   cursor: pointer;
   font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.logoutButton:hover {
+.logoutButton:hover,
+.profileLink:hover {
   background: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
 }
 
+/* Main content */
 .main {
   flex: 1;
   display: flex;
@@ -56,6 +72,7 @@
   padding: 40px 20px;
 }
 
+/* Card de status */
 .statusCard {
   background: white;
   border-radius: 20px;
@@ -98,7 +115,6 @@
   stroke: #209e00;
   transition: stroke-dasharray 0.8s ease;
 }
-
 
 .percentageText {
   position: relative;

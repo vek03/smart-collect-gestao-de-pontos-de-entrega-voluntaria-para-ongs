@@ -21,6 +21,7 @@ export default function CollectionStatus() {
   };
 
   const handleViewAllPoints = () => navigate('/collection-points');
+  const handleProfile = () => navigate('/view-profile'); // Novo link para perfil
 
   if (isLoading) {
     return (
@@ -34,10 +35,15 @@ export default function CollectionStatus() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1>Smart Collect</h1>
-        <button onClick={handleLogout} className={styles.logoutButton}>
-          Sair
-        </button>
+        <h1 onClick={handleViewAllPoints} className={styles.headerTitle}>Smart Collect</h1>
+        <div className={styles.headerActions}>
+          <button onClick={handleProfile} className={styles.logoutButton}>
+            Perfil
+          </button>
+          <button onClick={handleLogout} className={styles.logoutButton}>
+            Sair
+          </button>
+        </div>
       </header>
 
       <main className={styles.main}>

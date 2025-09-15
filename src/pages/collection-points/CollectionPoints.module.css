@@ -1,27 +1,15 @@
+/* CollectionPoints.module.css */
+
+/* Container principal */
 .container {
   min-height: 100vh;
-  width: 100%;
-  background: #fff;
-  font-family: "Poppins", sans-serif;
-  display: block !important; /* força display block ignorando heranças */
-} 
-
-.collectionPageWrapper {
-  display: block !important;
-  min-height: 100vh;
-  width: 100%;
-  background: #fff;
+  background: linear-gradient(135deg, #fdfdfd63 0%, #f4faf742 100%);
+  display: flex;
+  flex-direction: column;
   font-family: "Poppins", sans-serif;
 }
 
-/* Container interno */
-.container {
-  display: block !important; /* força block */
-  min-height: 100vh;
-  background: #fff;
-}
-
-/* Header */
+/* Header unificado */
 .header {
   top: 0;
   left: 0;
@@ -33,52 +21,95 @@
   justify-content: space-between;
   align-items: center;
   z-index: 999;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(2px);
 }
 
-.header h1 {
+.headerTitle {
   color: #000;
   font-size: 28px;
   font-weight: 700;
+  cursor: pointer;
 }
 
-.headerActions button {
-  margin-left: 10px;
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Botões do header */
-.statusButton,
-.logoutButton {
-  background: rgba(255,255,255,0.2);
-  color: #000;
-  border: 1px solid rgba(255,255,255,0.3);
+.logoutButton,
+.statusButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.2);
+  color: rgb(2, 56, 10);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 8px 18px;
   border-radius: 10px;
   cursor: pointer;
   font-weight: 600;
+  font-size: 16px;
   transition: all 0.3s ease;
 }
 
-.statusButton:hover,
-.logoutButton:hover {
-  background: rgba(255,255,255,0);
+.logoutButton:hover,
+.statusButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Botão de perfil corrigido */
+.profileLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.2);
+  color: rgb(2, 56, 10);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.profileLink:hover {
+  background: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
 }
 
 /* Main content */
 .main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 40px 20px;
 }
 
+/* Conteúdo / Card grande */
 .content {
   max-width: 1100px;
   margin: 0 auto;
   background: white;
   border-radius: 20px;
   padding: 40px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   animation: slideUp 0.6s ease-out;
+
+  /* CENTRALIZAR TODO O CONTEÚDO */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 @keyframes slideUp {
@@ -92,6 +123,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
+  width: 100%;
 }
 
 .pageHeader h2 {
@@ -100,8 +132,9 @@
   font-weight: 700;
 }
 
-.addButton {
-  background: linear-gradient(135deg,#66eaa6,#19a352);
+.addButton,
+.primaryAddButton {
+  background: linear-gradient(135deg, #66eaa6, #19a352);
   color: white;
   border: none;
   padding: 12px 20px;
@@ -109,13 +142,14 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 6px 16px rgba(78,84,200,0.3);
+  box-shadow: 0 6px 16px rgba(78, 84, 200, 0.3);
   transition: all 0.3s ease;
 }
 
-.addButton:hover {
+.addButton:hover,
+.primaryAddButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(78,84,200,0.4);
+  box-shadow: 0 8px 20px rgba(78, 84, 200, 0.4);
 }
 
 /* Empty State */
@@ -143,27 +177,10 @@
   margin-bottom: 24px;
 }
 
-.primaryAddButton {
-  background: linear-gradient(135deg,#66eaa6,#19a352);
-  color: white;
-  border: none;
-  padding: 14px 28px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.primaryAddButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(78,84,200,0.4);
-}
-
 /* Points List */
 .pointsList {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 24px;
 }
 
@@ -177,7 +194,7 @@
 
 .pointCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 .pointInfo h3 {
@@ -215,9 +232,9 @@
 }
 
 .viewButton {
-  background: rgba(78,84,200,0.1);
+  background: rgba(78, 84, 200, 0.1);
   color: #4e54c8;
-  border: 1px solid rgba(78,84,200,0.2);
+  border: 1px solid rgba(78, 84, 200, 0.2);
   padding: 8px 16px;
   border-radius: 8px;
   font-weight: 600;
@@ -226,23 +243,25 @@
 }
 
 .viewButton:hover {
-  background: rgba(78,84,200,0.2);
+  background: rgba(78, 84, 200, 0.2);
   transform: translateY(-1px);
 }
 
 /* Loading */
 .loading {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   color: white;
   font-weight: 600;
-  display: block;
 }
 
 .spinner {
   width: 50px;
   height: 50px;
-  border: 5px solid rgba(255,255,255,0.3);
+  border: 5px solid rgba(255, 255, 255, 0.3);
   border-top: 5px solid white;
   border-radius: 50%;
   animation: spin 1s linear infinite;

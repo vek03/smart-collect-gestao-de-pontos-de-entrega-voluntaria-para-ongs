@@ -22,6 +22,8 @@ export default function CollectionPoints() {
 
   const handleAddPoint = () => alert('Funcionalidade de adicionar ponto de coleta em breve!');
   const handleViewStatus = () => navigate('/collection-status');
+  const handleProfile = () => navigate('/view-profile');
+  const handleSmartCollectClick = () => navigate('/collection-points');
 
   if (isLoading) {
     return (
@@ -35,8 +37,13 @@ export default function CollectionPoints() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1>Smart Collect</h1>
+        <h1 className={styles.headerTitle} onClick={handleSmartCollectClick}>
+          Smart Collect
+        </h1>
         <div className={styles.headerActions}>
+          <a className={styles.profileLink} onClick={handleProfile}>
+            Perfil
+          </a>
           <button onClick={handleViewStatus} className={styles.statusButton}>
             Ver Status
           </button>
