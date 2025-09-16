@@ -1,3 +1,5 @@
+import { Theme } from "@radix-ui/themes";
+import "@radix-ui/themes/styles.css";
 import { useEffect } from 'react';
 import './App.css';
 import Footer from './components/footer/Footer';
