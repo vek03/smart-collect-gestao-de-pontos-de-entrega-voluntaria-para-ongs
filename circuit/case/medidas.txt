@@ -1,0 +1,16 @@
+Medidas (C, L, A):
+
+Sensor HC-SR04:
+45mm x 20mm x 15mm
+
+Sensor JSN-SR04:
+41.2mm x 28.7mm x 18mm
+| 
+---ENCAIXE DO FIO (Sensor JSN-SR04):
+7.5mm x 5.8mm x 4mm
+
+OLED:
+27 x 26 mm x 5mm
+
+ESP32:
+54 x 29 x 13 mm
