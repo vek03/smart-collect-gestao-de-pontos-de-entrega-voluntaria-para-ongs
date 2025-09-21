@@ -16,6 +16,8 @@
     "@radix-ui/themes": "^3.2.1",
     "firebase": "^12.2.1",
     "jose": "^6.0.13",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-hook-form": "^7.62.0",

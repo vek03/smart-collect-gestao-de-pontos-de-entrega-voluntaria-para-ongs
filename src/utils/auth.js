@@ -1,6 +1,6 @@
 // utils/auth.js
 import { initializeApp } from 'firebase/app';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -15,13 +15,38 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-export const login = (email, password) => signInWithEmailAndPassword(auth, email, password);
+export const setCookie = (name, value, hours) => {
+  const date = new Date();
+  date.setTime(date.getTime() + hours * 60 * 60 * 1000);
+  
+  const expires = `; expires=${date.toUTCString()}`;
+  document.cookie = `${name}=${value}${expires}; path=/`;
+}
 
-export const logout = () => signOut(auth);
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(";").shift();
+}
+
+function removeCookie(name) {
+  document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+}
+
+export const login = async (email, password) => {
+  const userCredential = await signInWithEmailAndPassword(auth, email, password);
+  const token = await userCredential.user.getIdToken();
+
+  setCookie('token', token, 1);
+}
+
+export const logout = () => {
+  signOut(auth);
+  removeCookie('token');
+};
 
 export const register = (email, password) => createUserWithEmailAndPassword(auth, email, password);
-
-export const generateToken = async (user) => btoa(JSON.stringify(user));
 export const saveToken = (token) => localStorage.setItem('token', token);
-export const getToken = () => localStorage.getItem('token');
-export const isAuthenticated = () => !!getToken();
+export const isAuthenticated = () => {
+  return !!getCookie('token');
+};

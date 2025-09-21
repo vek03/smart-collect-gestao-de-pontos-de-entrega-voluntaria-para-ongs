@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { login, saveToken, generateToken } from '../../utils/auth.js';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { isAuthenticated, login } from '../../utils/auth.js';
 import styles from './Login.module.css';
 
 export default function Login() {
@@ -15,14 +15,16 @@ export default function Login() {
 
     try {
       await login(email, password);
-      const token = await generateToken({ email });
-      saveToken(token);
       navigate('/collection-points');
     } catch (err) {
       console.error(err);
       setError('Email ou senha inválidos.');
     }
   };
+
+  if (isAuthenticated()) {
+    return <Navigate to="/collection-points" replace />;
+  }
 
   return (
     <div className={styles.loginPageContainer}>

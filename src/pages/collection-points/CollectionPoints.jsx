@@ -65,7 +65,7 @@ export default function CollectionPoints() {
   }
 
   return (
-    <Toast.Provider swipeDirection="right">
+    <Toast.Provider swipeDirection="right" duration={3000}>
       <div className={styles.container}>
         <header className={styles.header}>
           <h1 className={styles.headerTitle} onClick={handleSmartCollectClick}>
