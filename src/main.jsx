@@ -9,8 +9,9 @@ import Cadastro from './pages/cadastro/Cadastro.jsx';
 import CollectionPoints from './pages/collection-points/CollectionPoints.jsx';
 import CollectionStatus from './pages/collection-status/CollectionStatus.jsx';
 import Login from './pages/login/Login.jsx';
-import ProfilePage from './pages/profile/Profile.jsx'; // Página de edição
-import ViewProfile from './pages/profile/ViewProfile.jsx'; // Página de visualização
+import ProfilePage from './pages/profile/Profile.jsx'; 
+import ViewProfile from './pages/profile/ViewProfile.jsx'; 
+import Pev from './pages/pev/Pev.jsx';
 
 createRoot(document.getElementById('root')).render(
   <Theme
@@ -26,6 +27,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Cadastro />} />
+        <Route path="/pev" element={ <Pev />  } />
+         
 
         {/* Páginas protegidas */}
         <Route
@@ -60,6 +63,7 @@ createRoot(document.getElementById('root')).render(
             </ProtectedRoute>
           }
         />
+    
 
         {/* Redirecionamento padrão */}
         <Route path="*" element={<Navigate to="/login" replace />} />

@@ -8,7 +8,7 @@ export default function Header() {
             <nav>
             <ul>
                 <li><a href="#contato">Contato</a></li>
-                <li><a href="#contato">Encontre um PEV</a></li>
+                <li><a href="/pev">Encontre um PEV</a></li>
             </ul>
             </nav>
         </header>
