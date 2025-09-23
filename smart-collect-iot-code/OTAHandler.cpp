@@ -31,13 +31,9 @@ void OTAHandler::begin(const char* hostname, const char* password) {
     });
 
   ArduinoOTA.begin();
-  _display.clear();
-  _display.printText("OTA Pronto!", TextPos::MIDDLE_LEFT);
   Serial.print("[OTA] Pronto em: ");
   Serial.print(hostname);
-  delay(1500);
-  _display.clear();
-  _display.update();
+  handle(true);
 }
 
 void OTAHandler::handle(bool isConnected) {

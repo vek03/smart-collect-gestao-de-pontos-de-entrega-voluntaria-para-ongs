@@ -48,7 +48,7 @@ void OledDisplay::printText(const String& text, TextPos pos) {
 
     case TextPos::BOTTOM_LEFT:   x = 0; y = _height - h; break;
     case TextPos::BOTTOM_CENTER: x = (_width - w) / 2; y = _height - h; break;
-    case TextPos::BOTTOM_RIGHT:  x = _width - w; y = _height - h; break;
+    case TextPos::BOTTOM_RIGHT:  x = _width - w; y = _height - (h + 4); break;
   }
 
   _display.setCursor(x, y);
@@ -89,21 +89,19 @@ void OledDisplay::drawWiFiIcon() {
 
   if (_wifiConnected) {
     drawBitmapAt(x, y, wifiConnected16x16, 16, 16, SSD1306_WHITE);
-    drawX(x, y, size);
   } else {
     drawBitmapAt(x, y, wifiConnected16x16, 16, 16, SSD1306_WHITE);
-    drawX(x, y, size);
+    drawX(x, y + 1, size);
   }
 }
 
 void OledDisplay::drawFirebaseIcon() {
   int x = _width - 16;  // canto inferior direito
-  int y = _height - 16;
+  int y = _height - 40;
   int size = 16;
 
   if (_firebaseReady){
     printText("FB", TextPos::MIDDLE_RIGHT);
-    drawX(x, y, size);
   } else {
     printText("FB", TextPos::MIDDLE_RIGHT);
     drawX(x, y, size);
@@ -117,7 +115,6 @@ void OledDisplay::drawOtaIcon() {
 
   if (_otaReady){
     printText("OTA", TextPos::BOTTOM_RIGHT);
-    drawX(x, y, size);
   } else {
     printText("OTA", TextPos::BOTTOM_RIGHT);
     drawX(x, y, size);

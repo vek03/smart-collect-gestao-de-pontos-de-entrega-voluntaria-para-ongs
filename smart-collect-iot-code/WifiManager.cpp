@@ -13,7 +13,7 @@ void WifiManager::begin(const char* ssid, const char* pass) {
   while (!isConnected() && tries < 25) {
     delay(200);
     _display.setWiFiStatus(false);
-    _display.showLoading(String("Conectando ao Wifi..."));
+    _display.showLoading(String("Wifi..."));
     tries++;
   }
 
