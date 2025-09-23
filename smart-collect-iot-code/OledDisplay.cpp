@@ -85,13 +85,14 @@ void OledDisplay::showLoading(const String& message, int delayMs, int cycles) {
 void OledDisplay::drawWiFiIcon() {
   int x = _width - 16;  // canto superior direito
   int y = 0;
+  int size = 16;
 
   if (_wifiConnected) {
     drawBitmapAt(x, y, wifiConnected16x16, 16, 16, SSD1306_WHITE);
-    drawX(size, x, y);
+    drawX(x, y, size);
   } else {
     drawBitmapAt(x, y, wifiConnected16x16, 16, 16, SSD1306_WHITE);
-    drawX(16, 16, 16);
+    drawX(x, y, size);
   }
 }
 
@@ -102,10 +103,10 @@ void OledDisplay::drawFirebaseIcon() {
 
   if (_firebaseReady){
     printText("FB", TextPos::MIDDLE_RIGHT);
-    drawX(size, x, y);
+    drawX(x, y, size);
   } else {
     printText("FB", TextPos::MIDDLE_RIGHT);
-    drawX(size, x, y);
+    drawX(x, y, size);
   }
 }
 
@@ -116,10 +117,10 @@ void OledDisplay::drawOtaIcon() {
 
   if (_otaReady){
     printText("OTA", TextPos::BOTTOM_RIGHT);
-    drawX(size, x, y);
+    drawX(x, y, size);
   } else {
     printText("OTA", TextPos::BOTTOM_RIGHT);
-    drawX(size, x, y);
+    drawX(x, y, size);
   }
 }
 
