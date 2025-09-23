@@ -1,32 +1,47 @@
 #include "OTAHandler.h"
 #include <WiFi.h>
 
-void OTAHandler::begin(const char* hostname) {
+OTAHandler::OTAHandler(OledDisplay& display) : _display(display) {}
+
+void OTAHandler::begin(const char* hostname, const char* password) {
   ArduinoOTA.setHostname(hostname);
+  ArduinoOTA.setPassword(password);
 
   ArduinoOTA
-    .onStart([]() {
+    .onStart([this]() {
       String type = (ArduinoOTA.getCommand() == U_FLASH) ? "sketch" : "filesystem";
-      Serial.println("[OTA] Start " + type);
+      Serial.println("\n[OTA] Start " + type);
+      _display.clear();
+      _display.printText("OTA " + type + " Iniciado!", TextPos::MIDDLE_CENTER);
+      delay(1000);
     })
-    .onEnd([]() {
+    .onEnd([this]() {
       Serial.println("\n[OTA] End");
+      _display.clear();
+      _display.printText("OTA Finalizado!", TextPos::MIDDLE_CENTER);
     })
-    .onProgress([](unsigned int progress, unsigned int total) {
+    .onProgress([this](unsigned int progress, unsigned int total) {
       Serial.printf("[OTA] Progresso: %u%%\r", (progress * 100) / total);
+      _display.showLoading(String("Carregando OTA..."));
     })
-    .onError([](ota_error_t error) {
-      Serial.printf("[OTA] Erro [%u]\n", error);
+    .onError([this](ota_error_t error) {
+      Serial.printf("Erro[%u]: ", error);
+      _display.clear();
+      _display.printText("Erro no OTA! " + error, TextPos::MIDDLE_CENTER);
     });
 
   ArduinoOTA.begin();
+  _display.clear();
+  _display.printText("OTA Pronto!", TextPos::MIDDLE_LEFT);
   Serial.print("[OTA] Pronto em: ");
   Serial.print(hostname);
-  Serial.println(".local");
+  delay(1500);
+  _display.clear();
+  _display.update();
 }
 
-void OTAHandler::handle() {
-  if (WiFi.status() == WL_CONNECTED) {
-    ArduinoOTA.handle();
-  }
+void OTAHandler::handle(bool isConnected) {
+  _display.setOtaStatus(isConnected);
+
+  if (isConnected) ArduinoOTA.handle();
 }

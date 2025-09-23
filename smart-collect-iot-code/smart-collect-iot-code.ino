@@ -5,55 +5,52 @@
 #include "FirebaseRealtime.h"
 #include "OTAHandler.h"
 #include "UltrasonicSensor.h"
-#include "LcdDisplay.h"
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+#include <stdint.h>
 
-WifiManager wifi;
-FirebaseRealtime fb(FIREBASE_REFERENCE_URL, FIREBASE_AUTH_TOKEN);
-OTAHandler ota;
+OledDisplay oled(OLED_SCREEN_WIDTH, OLED_SCREEN_HEIGHT, OLED_RESET);
+WifiManager wifi(oled);
+FirebaseRealtime fb(FIREBASE_REFERENCE_URL, FIREBASE_AUTH_TOKEN, oled);
+OTAHandler ota(oled);
 UltrasonicSensor sensorA(TRIG_A, ECHO_A, PULSE_TIMEOUT_US);
 UltrasonicSensor sensorB(TRIG_B, ECHO_B, PULSE_TIMEOUT_US);
 UltrasonicSensor sensorC(TRIG_C, ECHO_C, PULSE_TIMEOUT_US);
-LcdDisplay lcd(LCD_I2C_ADDR, LCD_COLS, LCD_ROWS);
 
 unsigned long lastUpdateMs = 0;
-const unsigned long DISPLAY_INTERVAL_MS = 250;
 
 void setup() {
   Serial.begin(115200);
   delay(200);
 
-  // I2C
   Wire.begin();
 
-  // LCD
-  lcd.begin();
-  lcd.printLine(0, "Inicializando...");
-  lcd.printLine(1, "Aguarde");
+  oled.begin();
 
-  // Sensores
   sensorA.begin();
   sensorB.begin();
   sensorC.begin();
 
-  // WiFi + OTA
   wifi.begin(WIFI_SSID, WIFI_PASS);
-  ota.begin(OTA_HOSTNAME);
   fb.begin(FIREBASE_DEVICE_ID);
+  ota.begin(OTA_HOSTNAME, OTA_PASSWORD);
 
-  lcd.printLine(0, "WiFi: " + String(wifi.isConnected() ? "OK" : "…"));
-  lcd.printLine(1, "OTA pronto");
-  delay(1000);
+  oled.printText("Inicializado!", TextPos::MIDDLE_LEFT);
+  delay(2000);
 }
 
 void loop() {
-  ota.handle();
   wifi.loop();
+  fb.loop(wifi.isConnected());
+  ota.handle(wifi.isConnected());
+  oled.update();
 
   static float distA = NAN, distB = NAN, distC = NAN;
 
   unsigned long now = millis();
 
   if (now - lastUpdateMs >= DISPLAY_INTERVAL_MS) {
+    oled.clear();
     distA = sensorA.readCm(ULTRA_SAMPLES, ULTRA_SAMPLE_INTERVAL_MS);
     delay(INTER_SENSOR_DELAY_MS);
     distB = sensorB.readCm(ULTRA_SAMPLES, ULTRA_SAMPLE_INTERVAL_MS);
@@ -73,18 +70,13 @@ void loop() {
     if (isnan(distC)) l3 += "--.- cm";
     else l3 += String(distC, 1) + " cm";
 
-    lcd.printLine(0, l1);
-    lcd.printLine(1, l2);
-
-    delay(1000);
-
-    lcd.clear();
-    lcd.printLine(0, l3);
-
-    delay(1000);
+    oled.printText(l1, TextPos::TOP_LEFT);
+    oled.printText(l2, TextPos::MIDDLE_LEFT);
+    oled.printText(l3, TextPos::BOTTOM_LEFT);
 
     if (!isnan(distA) && !isnan(distB) && !isnan(distC)) fb.sendValues(((distA + distC) / 2), (distB < 5.0));
 
     lastUpdateMs = now;
+    delay(1000);
   }
 }

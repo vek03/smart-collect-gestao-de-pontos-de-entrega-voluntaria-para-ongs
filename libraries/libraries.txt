@@ -1,15 +1,21 @@
 LINKS DAS LIBRARIES DO PROJETO:
 
-- Firebase:
-https://github.com/Rupakpoddar/FirebaseArduino 
+- Adafruit_SSD1306@2.5.15
+https://github.com/adafruit/Adafruit_SSD1306
 
-- LiquidCrystal_I2C
-https://github.com/markub3327/LiquidCrystal_I2C
+- Adafruit-GFX-Library@1.12.1
+https://github.com/adafruit/Adafruit-GFX-Library
 
-- ArduinoJson
+- Adafruit_BusIO@1.17.2
+https://github.com/adafruit/Adafruit_BusIO
+
+- ArduinoJson@7.4.2
 https://arduinojson.org/?utm_source=meta&utm_medium=library.properties 
 
-- WifiManager
+- Firebase@1.0.4
+https://github.com/Rupakpoddar/FirebaseArduino 
+
+- WifiManager@2.0.17
 https://github.com/tzapu/WiFiManager.git 
 
 Libraries inclusas no Arduino IDE:
@@ -17,3 +23,4 @@ Libraries inclusas no Arduino IDE:
 - Arduino
 - ArduinoOTA
 - Wire
+- stdint

@@ -1,20 +1,20 @@
 #include "FirebaseRealtime.h"
 
-FirebaseRealtime::FirebaseRealtime(const char* url, const char* token)
-: _fb(url, token) {}
+FirebaseRealtime::FirebaseRealtime(const char* url, const char* token, OledDisplay& display)
+  : _fb(url, token), _display(display) {}
 
-void FirebaseRealtime::begin(const char* deviceId){
+void FirebaseRealtime::begin(const char* deviceId) {
   _deviceId = deviceId;
 }
 
-int FirebaseRealtime::sendValues(float averageCm, bool isFull){
+int FirebaseRealtime::sendValues(float averageCm, bool isFull) {
   _json["averageCm"] = averageCm;
   _json["isFull"] = isFull;
 
   return sendJson();
 }
 
-int FirebaseRealtime::sendJson(){
+int FirebaseRealtime::sendJson() {
   String output;
 
   _json.shrinkToFit();
@@ -31,15 +31,21 @@ int FirebaseRealtime::sendJson(){
   Serial.println(responseCode);
 
   if (responseCode == 200) {
-      Serial.println("JSON data successfully sent to Firebase!");
+    Serial.println("JSON data successfully sent to Firebase!");
+    _hasError = false;
   } else {
-      Serial.println("Failed to send JSON data to Firebase!");
-      Serial.print("Response code ");
-      Serial.print(responseCode);
-      Serial.println(" indicates an error occurred.");
+    Serial.println("Failed to send JSON data to Firebase!");
+    Serial.print("Response code ");
+    Serial.print(responseCode);
+    Serial.println("Indicates an error occurred.");
+    _hasError = true;
   }
 
   Serial.println();
 
   return responseCode;
+}
+
+void FirebaseRealtime::loop(bool isConnected) {
+  _display.setFirebaseStatus(!_hasError && isConnected);
 }
