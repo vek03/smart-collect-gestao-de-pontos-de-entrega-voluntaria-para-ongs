@@ -13,7 +13,7 @@ void WifiManager::begin(const char* ssid, const char* pass) {
   while (!isConnected() && tries < 25) {
     delay(200);
     _display.setWiFiStatus(false);
-    _display.showLoading(String("Wifi..."));
+    _display.showLoading(String("Conectando Wifi"));
     tries++;
   }
 
@@ -25,12 +25,21 @@ void WifiManager::begin(const char* ssid, const char* pass) {
   delay(1500);
   _display.clear();
   _display.update();
+  delay(200);
 }
 
 bool WifiManager::isConnected() const {
   return WiFi.status() == WL_CONNECTED;
 }
 
+void WifiManager::reconnect() {
+  //TODO: RECONNECT
+}
+
 void WifiManager::loop() {
   _display.setWiFiStatus(isConnected());
+
+  if(!isConnected()) {
+    reconnect();
+  }
 }

@@ -29,7 +29,7 @@ constexpr int TRIG_C = 18;
 constexpr int ECHO_C = 5;
 
 // Tempo entre as leituras
-const unsigned long DISPLAY_INTERVAL_MS = 250;
+const unsigned long DISPLAY_INTERVAL_MS = 5000;
 
 // Tempo máximo de eco (us) ~ distância máx. ~ 5m -> ~30000 us
 constexpr unsigned long PULSE_TIMEOUT_US = 30000;

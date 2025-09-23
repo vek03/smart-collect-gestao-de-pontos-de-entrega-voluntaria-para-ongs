@@ -7,6 +7,7 @@ public:
   WifiManager(OledDisplay& display);
   void begin(const char* ssid, const char* pass);
   bool isConnected() const;
+  void reconnect();
   void loop();
   
 private:

@@ -35,6 +35,11 @@ void setup() {
   fb.begin(FIREBASE_DEVICE_ID);
   ota.begin(OTA_HOSTNAME, OTA_PASSWORD);
 
+  delay(200);
+  oled.clear();
+  oled.update();
+  delay(200);
+
   oled.printText("Inicializado!", TextPos::MIDDLE_LEFT);
   delay(2000);
 }

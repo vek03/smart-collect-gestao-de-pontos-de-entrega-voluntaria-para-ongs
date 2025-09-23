@@ -5,7 +5,7 @@ FirebaseRealtime::FirebaseRealtime(const char* url, const char* token, OledDispl
 
 void FirebaseRealtime::begin(const char* deviceId) {
   _deviceId = deviceId;
-  loop(true);
+  _display.setFirebaseStatus(true);
 }
 
 int FirebaseRealtime::sendValues(float averageCm, bool isFull) {
