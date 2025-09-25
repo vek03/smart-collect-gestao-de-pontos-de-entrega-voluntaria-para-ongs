@@ -53,6 +53,7 @@ void OledDisplay::printText(const String& text, TextPos pos) {
 
   _display.setCursor(x, y);
   _display.print(text);
+  _display.display();
 }
 
 void OledDisplay::drawBitmapAt(int16_t x, int16_t y, const uint8_t bitmap[], int16_t w, int16_t h, uint16_t color) {

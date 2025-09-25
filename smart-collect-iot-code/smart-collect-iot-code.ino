@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include "Config.h"
-#include "WifiManager.h"
+#include "WifiManagerSC.h"
 #include "FirebaseRealtime.h"
 #include "OTAHandler.h"
 #include "UltrasonicSensor.h"
@@ -10,7 +10,7 @@
 #include <stdint.h>
 
 OledDisplay oled(OLED_SCREEN_WIDTH, OLED_SCREEN_HEIGHT, OLED_RESET);
-WifiManager wifi(oled);
+WifiManagerSC wifi(oled, HOTSPOT_SSID, HOTSPOT_PASS);
 FirebaseRealtime fb(FIREBASE_REFERENCE_URL, FIREBASE_AUTH_TOKEN, oled);
 OTAHandler ota(oled);
 UltrasonicSensor sensorA(TRIG_A, ECHO_A, PULSE_TIMEOUT_US);
@@ -31,7 +31,7 @@ void setup() {
   sensorB.begin();
   sensorC.begin();
 
-  wifi.begin(WIFI_SSID, WIFI_PASS);
+  wifi.begin();
   fb.begin(FIREBASE_DEVICE_ID);
   ota.begin(OTA_HOSTNAME, OTA_PASSWORD);
 

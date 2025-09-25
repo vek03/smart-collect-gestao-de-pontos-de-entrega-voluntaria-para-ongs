@@ -1,8 +1,8 @@
 #pragma once
 
-// ====== WI-FI ======
-constexpr const char* WIFI_SSID = "YOUR_WIFI_SSID";
-constexpr const char* WIFI_PASS = "YOUR_WIFI_PASSWORD";
+// ====== HOTSPOT & OTA ======
+constexpr const char* HOTSPOT_SSID = "smart-collect-iot";
+constexpr const char* HOTSPOT_PASS = "123456789";
 constexpr const char* OTA_HOSTNAME = "smart-collect-iot"; // mDNS: smart-collect-iot.local
 constexpr const char* OTA_PASSWORD = "123456789";
 
