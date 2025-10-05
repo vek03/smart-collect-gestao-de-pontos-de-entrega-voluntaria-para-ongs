@@ -79,11 +79,15 @@ void loop() {
     oled.printText(sensorValues, TextPos::BOTTOM_LEFT);
 
     if (!isnan(distA) && !isnan(distB) && !isnan(distC)) {
-      bool isFull = distB < 5;
       float averageCm = calculateAverageCm(distA, distB, distC);
-      float fillPercentage = calculatePercentage(averageCm, HEIGHT_SMARTCOLLECT_IN_CENTIMETERS, isFull);
+      float fillPercentage = calculatePercentage(averageCm, HEIGHT_SMARTCOLLECT_IN_CENTIMETERS);
+      bool isFull = distB < CENTIMETERS_TOP_FULL || fillPercentage == 100;
+      
+      if(isFull && fillPercentage != 100) {
+        fillPercentage = 100;
+      }
 
-      oled.printText(String(fillPercentage, 0) + "%", TextPos::TOP_LEFT, 4);
+      oled.printText(String(fillPercentage, 0) + "%", TextPos::TOP_LEFT, 5);
       fb.setAverageCm(averageCm);
       fb.setFillPercentage(fillPercentage);
       fb.setIsFull(isFull);
@@ -111,12 +115,11 @@ float calculateAverageCm(float valor1, float valor2, float valor3) {
   return sum / 3;
 }
 
-float calculatePercentage(float fill, float height, bool isFull) {
-  if (isFull) return 100;
+float calculatePercentage(float fill, float height) {
   if (fill == 0 || height == 0) return 0;
 
   float percentage = (fill / height) * 100;
   
-  if (percentage > 100) return 100;
+  if (percentage > 99.5) return 100;
   else return percentage;
 }

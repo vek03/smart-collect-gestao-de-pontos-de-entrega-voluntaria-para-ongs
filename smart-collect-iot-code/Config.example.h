@@ -11,8 +11,9 @@ constexpr const char* FIREBASE_DEVICE_ID = "1X";
 constexpr const char* FIREBASE_REFERENCE_URL = "YOUR_FIREBASE_REFERENCE_URL";
 constexpr const char* FIREBASE_AUTH_TOKEN = "YOUR_FIREBASE_AUTH_TOKEN";
 
-// ====== Informações do Ponto de Coleta ======
+// ====== PONTO DE COLETA ======
 constexpr float HEIGHT_SMARTCOLLECT_IN_CENTIMETERS = 62;
+constexpr float CENTIMETERS_TOP_FULL = 10;
 
 // ====== DISPLAY OLED ======
 constexpr uint8_t OLED_I2C_ADDR = 0x27; // comum: 0x27 ou 0x3F
