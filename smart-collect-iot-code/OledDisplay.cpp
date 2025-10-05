@@ -10,7 +10,6 @@ void OledDisplay::begin(uint8_t i2cAddr) {
     for(;;); // trava
   }
   clear();
-  update();
 }
 
 void OledDisplay::clear() {
@@ -29,11 +28,11 @@ void OledDisplay::setOtaStatus(bool ready) {
   _otaReady = ready;
 }
 
-void OledDisplay::printText(const String& text, TextPos pos) {
+void OledDisplay::printText(const String& text, TextPos pos, uint8_t textSize) {
   int16_t x, y;
   uint16_t w, h;
 
-  _display.setTextSize(1);
+  _display.setTextSize(textSize);
   _display.setTextColor(SSD1306_WHITE);
   _display.getTextBounds(text.c_str(), 0, 0, &x, &y, &w, &h);
 
@@ -53,7 +52,7 @@ void OledDisplay::printText(const String& text, TextPos pos) {
 
   _display.setCursor(x, y);
   _display.print(text);
-  _display.display();
+  display();
 }
 
 void OledDisplay::drawBitmapAt(int16_t x, int16_t y, const uint8_t bitmap[], int16_t w, int16_t h, uint16_t color) {
@@ -127,12 +126,16 @@ void OledDisplay::drawX(int x, int y, int size) {
 
   _display.drawLine(x, y + size - 1, x + size - 1, y, SSD1306_WHITE);
 
-  _display.display();
+  display();
 }
 
 void OledDisplay::update() {
   drawWiFiIcon();
   drawOtaIcon();
   drawFirebaseIcon();
+  display();
+}
+
+void OledDisplay::display() {
   _display.display();
 }

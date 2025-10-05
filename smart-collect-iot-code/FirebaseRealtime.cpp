@@ -8,11 +8,26 @@ void FirebaseRealtime::begin(const char* deviceId) {
   _display.setFirebaseStatus(true);
 }
 
-int FirebaseRealtime::sendValues(float averageCm, bool isFull) {
+void FirebaseRealtime::setAverageCm(float averageCm) {
   _json["averageCm"] = averageCm;
-  _json["isFull"] = isFull;
+}
 
-  return sendJson();
+void FirebaseRealtime::setFillPercentage(float fillPercentage) {
+  _json["fillPercentage"] = fillPercentage;
+}
+
+void FirebaseRealtime::setIsFull(bool isFull) {
+  _json["isFull"] = isFull;
+}
+
+void FirebaseRealtime::clearJson() {
+  _json.clear();
+}
+
+void FirebaseRealtime::setErrors(bool sensor1, bool sensor2, bool sensor3) {
+  _json["errors"]["sensor1"] = sensor1;
+  _json["errors"]["sensor2"] = sensor2;
+  _json["errors"]["sensor3"] = sensor3;
 }
 
 int FirebaseRealtime::sendJson() {
@@ -43,6 +58,7 @@ int FirebaseRealtime::sendJson() {
   }
 
   Serial.println();
+  clearJson();
 
   return responseCode;
 }

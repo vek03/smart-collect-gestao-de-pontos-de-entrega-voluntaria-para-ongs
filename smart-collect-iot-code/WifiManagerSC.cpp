@@ -5,7 +5,7 @@ WifiManagerSC::WifiManagerSC(OledDisplay& display, const char* ssid, const char*
 void WifiManagerSC::begin() {
   _display.setWiFiStatus(false);
   _display.clear();
-  _display.update();
+  _display.display();
   _display.printText("Conectando ao Wifi!", TextPos::TOP_LEFT);
   _display.printText("Acesse o Hotspot: " + String(_ssid), TextPos::MIDDLE_LEFT);
   _display.printText("E acesse pelo navegador: 192.168.4.1", TextPos::BOTTOM_LEFT);

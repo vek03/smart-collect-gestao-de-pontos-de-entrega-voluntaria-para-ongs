@@ -56,6 +56,7 @@ void loop() {
 
   if (now - lastUpdateMs >= DISPLAY_INTERVAL_MS) {
     oled.clear();
+    oled.update();
     distA = sensorA.readCm(ULTRA_SAMPLES, ULTRA_SAMPLE_INTERVAL_MS);
     delay(INTER_SENSOR_DELAY_MS);
     distB = sensorB.readCm(ULTRA_SAMPLES, ULTRA_SAMPLE_INTERVAL_MS);
@@ -63,25 +64,59 @@ void loop() {
     distC = sensorC.readCm(ULTRA_SAMPLES, ULTRA_SAMPLE_INTERVAL_MS);
     delay(INTER_SENSOR_DELAY_MS);
 
-    String l1 = "A: ";
-    if (isnan(distA)) l1 += "--.- cm";
-    else l1 += String(distA, 1) + " cm";
+    String sensorValues = "A ";
+    if (isnan(distA)) sensorValues += "--";
+    else sensorValues += String(distA, 0);
 
-    String l2 = "B: ";
-    if (isnan(distB)) l2 += "--.- cm";
-    else l2 += String(distB, 1) + " cm";
+    sensorValues += " B ";
+    if (isnan(distB)) sensorValues += "--";
+    else sensorValues += String(distB, 0);
 
-    String l3 = "C: ";
-    if (isnan(distC)) l3 += "--.- cm";
-    else l3 += String(distC, 1) + " cm";
+    sensorValues += " C ";
+    if (isnan(distC)) sensorValues += "--";
+    else sensorValues += String(distC, 0);
 
-    oled.printText(l1, TextPos::TOP_LEFT);
-    oled.printText(l2, TextPos::MIDDLE_LEFT);
-    oled.printText(l3, TextPos::BOTTOM_LEFT);
+    oled.printText(sensorValues, TextPos::BOTTOM_LEFT);
 
-    if (!isnan(distA) && !isnan(distB) && !isnan(distC)) fb.sendValues(((distA + distC) / 2), (distB < 5.0));
+    if (!isnan(distA) && !isnan(distB) && !isnan(distC)) {
+      bool isFull = distB < 5;
+      float averageCm = calculateAverageCm(distA, distB, distC);
+      float fillPercentage = calculatePercentage(averageCm, HEIGHT_SMARTCOLLECT_IN_CENTIMETERS, isFull);
 
+      oled.printText(String(fillPercentage, 0) + "%", TextPos::TOP_LEFT, 4);
+      fb.setAverageCm(averageCm);
+      fb.setFillPercentage(fillPercentage);
+      fb.setIsFull(isFull);
+    }
+
+    fb.setErrors(isnan(distA), isnan(distB), isnan(distC));
+    fb.sendJson();
     lastUpdateMs = now;
     delay(1000);
   }
+}
+
+float calculateAverageCm(float valor1, float valor2, float valor3) {
+  if(valor1 < 25) {
+    valor1 = valor2;
+  }
+
+  if(valor3 < 25) {
+    valor3 = valor2;
+  }
+
+  float sum = valor1 + valor2 + valor3;
+
+  if (sum == 0) return 0;
+  return sum / 3;
+}
+
+float calculatePercentage(float fill, float height, bool isFull) {
+  if (isFull) return 100;
+  if (fill == 0 || height == 0) return 0;
+
+  float percentage = (fill / height) * 100;
+  
+  if (percentage > 100) return 100;
+  else return percentage;
 }
