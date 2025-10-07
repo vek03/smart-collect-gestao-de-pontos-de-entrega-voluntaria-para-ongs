@@ -16,6 +16,8 @@ constexpr float HEIGHT_SMARTCOLLECT_IN_CENTIMETERS = 62;
 constexpr float CENTIMETERS_TOP_FULL = 10;
 
 // ====== DISPLAY OLED ======
+// SCL = GPIO 22
+// SDA = GPIO 21
 constexpr uint8_t OLED_I2C_ADDR = 0x27; // comum: 0x27 ou 0x3F
 constexpr uint8_t OLED_SCREEN_WIDTH = 128;
 constexpr uint8_t OLED_SCREEN_HEIGHT = 64;
