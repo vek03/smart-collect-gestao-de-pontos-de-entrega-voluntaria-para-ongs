@@ -1,7 +1,7 @@
 # <img src="assets/logo_horizontal.png" alt="Logo do SmartCollect" width="600">
 
 Projeto Integrador desenvolvido para implementar um **Ponto de Entrega Voluntária Inteligente (PEV)**.  
-O sistema utiliza sensores ultrassônicos e um ESP32 para medir a porcentagem de preenchimento de coletores, exibindo os dados em um display LCD e enviando-os em tempo real para o **Firebase Realtime Database**.  
+O sistema utiliza sensores ultrassônicos e um ESP32 para medir a porcentagem de preenchimento de coletores, exibindo os dados em um display OLED e enviando-os em tempo real para o **Firebase Realtime Database**.  
 
 A solução tem como objetivo **apoiar ONGs** no gerenciamento de pontos de coleta, ao mesmo tempo em que engaja doadores, permitindo que verifiquem se os pontos estão ativos e recebendo doações.
 
@@ -27,7 +27,7 @@ O **SmartCollect IoT** busca tornar os Pontos de Entrega Voluntária mais **efic
 ## 🔧 Componentes Eletrônicos
 
 - **ESP32** – Microcontrolador principal (Wi-Fi integrado)  
-- **Display LCD 16X2** – Exibição local das informações  
+- **Display OLED 128X64** – Exibição local das informações  
 - **Sensor Ultrassônico HC-SR04** – Medição de distância (interno)  
 - **Sensor Ultrassônico AJ-SR04M** – Medição de distância (externo)  
 - **Fonte chaveada 5V 3A** – Alimentação estável do sistema  
@@ -54,10 +54,10 @@ O **SmartCollect IoT** busca tornar os Pontos de Entrega Voluntária mais **efic
 
 > Case 3D feita no Tinkercad
 
-👉 [Acessar Tinkercad da Case 3D](https://www.tinkercad.com/things/0keOgNhEnew-smartcollect-10?sharecode=U8Y5dr6xEAFNGijWksgJZa3ci9BxK0j4eXwOnp7C59I)
+👉 [Acessar Tinkercad da Case 3D](https://www.tinkercad.com/things/6KT6wEdCp2w-smartcollect-20)
 
 <div align="center">
-  <img src="circuit/case/SmartCollect 1.0.png" alt="Case 3D do SmartCollect" width="1000">
+  <img src="circuit/case/SmartCollect 2.0.png" alt="Case 3D do SmartCollect" width="1000">
 </div>
 
 ---
@@ -84,9 +84,10 @@ A branch do frontend que hospeda a UI está disponível no seguinte link:
 
 - Leitura da distância por sensores ultrassônicos  
 - Cálculo da **porcentagem de preenchimento** dos coletores  
-- Exibição em tempo real no **Display LCD**  
+- Exibição em tempo real no **Display OLED**  
 - Envio dos dados para o **Firebase Realtime Database**  
 - Preparado para integração com o **painel web das ONGs**  
+- Configuração do Wifi via **Hotspot do dispositivo**
 
 ---
 
@@ -142,8 +143,7 @@ SmartCollect-IoT/
 
 ## 📌 Status do Projeto
 > 🚀 Release [v1.0-iot-beta](https://github.com/fatec-zona-leste/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/v1.0-iot-beta) - Primeira versão estável do IoT 
-- 🚧 Em desenvolvimento – Release v1.0-iot-alpha
-- 🚧 Em desenvolvimento – Release v2.0-iot-beta
+> 🚀 Release [v2.0-iot-beta](https://github.com/fatec-zona-leste/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/v2.0-iot-beta) - Segunda versão estável do IoT 
 - 🚧 Em desenvolvimento – Release v2.0-iot-alpha
 
 ---
