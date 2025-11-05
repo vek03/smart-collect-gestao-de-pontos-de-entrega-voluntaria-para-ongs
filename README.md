@@ -52,13 +52,17 @@ O **SmartCollect IoT** busca tornar os Pontos de Entrega Voluntária mais **efic
 
 ## 🧊 Case 3D
 
-> Case 3D com Posicionamento dos Componentes
-
 👉 [Acessar Tinkercad da Case 3D](https://www.tinkercad.com/things/6KT6wEdCp2w-smartcollect-20)
+
+> Case 3D com Posicionamento dos Componentes
 
 <div align="center">
   <img src="circuit/case/SmartCollect 2.0.png" alt="Case 3D do SmartCollect" width="1000">
 </div>
+
+<br>
+<hr>
+<br>
 
 > Case 3D Vazia
 
