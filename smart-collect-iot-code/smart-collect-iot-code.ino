@@ -78,8 +78,12 @@ void loop() {
 
     oled.printText(sensorValues, TextPos::BOTTOM_LEFT);
 
-    if (!isnan(distA) && !isnan(distB) && !isnan(distC)) {
-      float averageCm = calculateAverageCm(distA, distB, distC);
+    if (
+      !isnan(distA) && !isnan(distB) && !isnan(distC)
+      &&
+      distA > 0 && distB > 0 && distC > 0
+    ) {
+      float averageCm = calculateAverageCm(distA, distB, distC, HEIGHT_SMARTCOLLECT_IN_CENTIMETERS);
       float fillPercentage = calculatePercentage(averageCm, HEIGHT_SMARTCOLLECT_IN_CENTIMETERS);
       bool isFull = distB < CENTIMETERS_TOP_FULL || fillPercentage == 100;
       
@@ -100,7 +104,9 @@ void loop() {
   }
 }
 
-float calculateAverageCm(float valor1, float valor2, float valor3) {
+float calculateAverageCm(float valor1, float valor2, float valor3, float height) {
+  if (height <= 0) return 0;
+
   if(valor1 < 25) {
     valor1 = valor2;
   }
@@ -109,14 +115,23 @@ float calculateAverageCm(float valor1, float valor2, float valor3) {
     valor3 = valor2;
   }
 
-  float sum = valor1 + valor2 + valor3;
+  valor1 = height - valor1;
+  valor2 = height - valor2;
+  valor3 = height - valor3;
+
+  float sum = zeroIfNegative(valor1) + zeroIfNegative(valor2) + zeroIfNegative(valor3);
 
   if (sum == 0) return 0;
-  return sum / 3;
+  else return sum / 3;
+}
+
+float zeroIfNegative(float value) {
+  if (value < 0) return 0;
+  else return value;
 }
 
 float calculatePercentage(float fill, float height) {
-  if (fill == 0 || height == 0) return 0;
+  if (fill <= 0 || height <= 0) return 0;
 
   float percentage = (fill / height) * 100;
   
