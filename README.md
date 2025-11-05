@@ -60,6 +60,10 @@ O **SmartCollect IoT** busca tornar os Pontos de Entrega Voluntária mais **efic
   <img src="circuit/case/SmartCollect 2.0.png" alt="Case 3D do SmartCollect" width="1000">
 </div>
 
+<div align="center">
+  <img src="circuit/case/SmartCollect 2.0 - Vazio.png" alt="Case 3D do SmartCollect Vazio" width="1000">
+</div>
+
 ---
 
 ## 📐 Esquemático dos Componentes
