@@ -12,8 +12,8 @@ constexpr const char* FIREBASE_REFERENCE_URL = "YOUR_FIREBASE_REFERENCE_URL";
 constexpr const char* FIREBASE_AUTH_TOKEN = "YOUR_FIREBASE_AUTH_TOKEN";
 
 // ====== PONTO DE COLETA ======
-constexpr float HEIGHT_SMARTCOLLECT_IN_CENTIMETERS = 62;
-constexpr float CENTIMETERS_TOP_FULL = 10;
+constexpr float HEIGHT_SMARTCOLLECT_IN_CENTIMETERS = 55;
+constexpr float CENTIMETERS_TOP_FULL = 12;
 
 // ====== DISPLAY OLED ======
 // SCL = GPIO 22
