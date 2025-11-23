@@ -27,7 +27,7 @@ export default function Cadastro() {
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    if (!nome || !email || !password || !confirmPassword) {
+    if (!nome || !email || !password || !confirmPassword || !telefone || !cnpj) {
       setError('Preencha todos os campos obrigatórios.');
       return;
     }
@@ -53,14 +53,14 @@ export default function Cadastro() {
       const ongData = {
         email,
         owner: userCredential.user.uid,
-        nome,
-        telefone,
-        endereco,
+        name: nome,
+        phone: telefone,
+        address: endereco,
         website,
         facebook,
         instagram,
         cnpj,
-        missao
+        mission: missao
       };
 
       await addDoc(collection(db, 'ongs'), ongData);
@@ -108,7 +108,7 @@ export default function Cadastro() {
             </div>
 
             <div className={styles.inputGroup}>
-              <label>Telefone</label>
+              <label>Telefone *</label>
               <input 
                 type="text" 
                 value={telefone}
@@ -147,7 +147,7 @@ export default function Cadastro() {
                 type="text" 
                 value={facebook}
                 onChange={(e) => setFacebook(e.target.value)}
-                placeholder="Link do Facebook"
+                placeholder="@facebook"
               />
             </div>
 
@@ -164,7 +164,7 @@ export default function Cadastro() {
 
           <div className={styles.row}>
             <div className={styles.inputGroup}>
-              <label>CNPJ</label>
+              <label>CNPJ *</label>
               <input 
                 type="text" 
                 value={cnpj}

@@ -73,8 +73,8 @@ export default function ViewProfile() {
           <p>
             <strong>Facebook:</strong>{" "}
             <a
-              href={ong?.facebook ? `https://www.facebook.com/${ong.facebook}` : "#"}
-              target="_blank"
+              href={ong?.facebook ? `https://www.facebook.com/${ong.facebook.split("@")[1]}` : "#"}
+              target={ong?.facebook ? "_blank" : "_self"}
               rel="noopener noreferrer"
             >
               {ong?.facebook || "-"}
@@ -83,8 +83,8 @@ export default function ViewProfile() {
           <p>
             <strong>Instagram:</strong>{" "}
             <a
-              href={ong?.instagram ? `https://www.instagram.com/${ong.instagram}` : "#"}
-              target="_blank"
+              href={ong?.instagram ? `https://www.instagram.com/${ong.instagram.split("@")[1]}` : "#"}
+              target={ong?.instagram ? "_blank" : "_self"}
               rel="noopener noreferrer"
             >
               {ong?.instagram || "-"}
