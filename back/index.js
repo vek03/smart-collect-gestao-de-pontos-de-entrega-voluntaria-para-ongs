@@ -14,7 +14,8 @@ if (!fs.existsSync(uploadDir)) {
 }
 
 // Servir imagens estaticamente
-app.use("/uploads", express.static(uploadDir));
+// app.use("/uploads", express.static(uploadDir));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Configurar Multer
 const storage = multer.diskStorage({

@@ -1,0 +1,28 @@
+version: "3.9"
+
+networks:
+  appnet:
+    driver: bridge
+
+services:
+  backend:
+    build: ./back
+    container_name: backend
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./backend/uploads:/app/uploads
+    environment:
+      - PORT=3001
+    networks:
+      - appnet
+
+  frontend:
+    build: ./web
+    container_name: frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - appnet
