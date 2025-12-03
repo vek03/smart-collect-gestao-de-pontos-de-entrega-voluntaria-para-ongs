@@ -103,7 +103,7 @@ smart-collect-ui/
 │   │   ├── pages/         # Páginas principais do sistema (cadastro, login, home, etc.)
 │   │   ├── providers/     # Bibliotecas provedoras
 │   │   ├── utils/         # Funções utilitárias e helpers usados em diferentes partes do projeto
-│   │
+│   │   │
 │   ├── .env.example       # Exemplo de configuração das variáveis de ambiente
 │   ├── index.html         # Arquivo HTML base da aplicação React
 ```
@@ -135,7 +135,7 @@ smart-collect-ui/
 ---
 
 ## 📌 Status do Projeto
-> 🚧 Em desenvolvimento – Versão inicial da UI
+> 🚀 Release [v1.0-front-alpha](https://github.com/fatec-zona-leste/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/v1.0-front-alpha) - Primeira versão Alpha do FrontEnd
 
 ---
 
