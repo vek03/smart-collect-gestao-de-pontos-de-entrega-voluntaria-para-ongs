@@ -70,7 +70,7 @@ A branch do Dispositivo que hospeda o IoT está disponível no seguinte link:
 
 Exemplo de protótipo de dashboard:  
 <p align="center">
-  <img src="https://img.shields.io/badge/Demo-Em%20Breve-lightgrey?style=for-the-badge"/>
+  <img src="web/src/assets/dashboard.png" alt="Dashboard do SmartCollect" width="600">
 </p>  
 
 ---
@@ -89,15 +89,23 @@ Exemplo de protótipo de dashboard:
 ```bash
 smart-collect-ui/
 │
-├── public/            # Arquivos públicos acessíveis diretamente, como ícones e imagens estáticas
-├── src/               # Código-fonte principal da aplicação
-│   ├── assets/        # Logos, ícones e outros arquivos estáticos usados no front-end
-│   ├── components/    # Componentes reutilizáveis da interface (ex: Header, Footer, rotas protegidas)
-│   ├── pages/         # Páginas principais do sistema (cadastro, login, home, etc.)
-│   ├── utils/         # Funções utilitárias e helpers usados em diferentes partes do projeto
-│
-├── .env.example       # Exemplo de configuração das variáveis de ambiente
-├── index.html         # Arquivo HTML base da aplicação React
+├── back/                  # Arquivos públicos acessíveis diretamente, como ícones e imagens estáticas
+|   ├── uploads/           # Pasta de imagens das ONGs
+|   ├── index.js           # Arquivo JS para base do backend
+|   |
+├── web/                   # Código-fonte principal da aplicação
+|   ├── public/            # Arquivos públicos acessíveis diretamente, como ícones e imagens estáticas
+|   ├── src/               # Código-fonte principal da aplicação
+|   │   ├── assets/        # Logos, ícones e outros arquivos estáticos usados no front-end
+|   │   ├── components/    # Componentes reutilizáveis da interface (ex: Header, Footer, rotas protegidas)
+|   │   ├── context/       # Componentes de Contexto da aplicação
+|   │   ├── firebase/      # Componentes do Firebase Realtime e Firebase Firestore
+|   │   ├── pages/         # Páginas principais do sistema (cadastro, login, home, etc.)
+|   |   ├── providers/     # Bibliotecas provedoras
+|   │   ├── utils/         # Funções utilitárias e helpers usados em diferentes partes do projeto
+|   │
+|   ├── .env.example       # Exemplo de configuração das variáveis de ambiente
+|   ├── index.html         # Arquivo HTML base da aplicação React
 ```
 
 ---
