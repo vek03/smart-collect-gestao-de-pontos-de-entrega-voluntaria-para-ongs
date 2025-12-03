@@ -1,4 +1,4 @@
-# <img src="src/assets/logo_horizontal.png" alt="Logo do SmartCollect" width="600">
+# <img src="web/src/assets/logo_horizontal.png" alt="Logo do SmartCollect" width="600">
 
 Projeto Integrador desenvolvido para implementar um **Ponto de Entrega Voluntária Inteligente (PEV)**.  
 O sistema utiliza sensores ultrassônicos e um ESP32 para medir a porcentagem de preenchimento de coletores, exibindo os dados em um display OLED e enviando-os em tempo real para o **Firebase Realtime Database**.  
@@ -111,7 +111,8 @@ smart-collect-ui/
 ```
 
 2. Abra o projeto na sua IDE.
-3. Instale as dependências do Node:
+3. Acesse o front end, rodando `cd web`
+4. Instale as dependências do front-end:
 ```bash
    npm install
 ```
@@ -119,6 +120,9 @@ smart-collect-ui/
 ```bash
    npm run dev
 ```
+5. Em outro terminal, acesse a pasta da API, rodando `cd back`
+6. Instale as dependencias rodando `npm install`
+7. Rode a API com `npm start`
 
 ---
 
