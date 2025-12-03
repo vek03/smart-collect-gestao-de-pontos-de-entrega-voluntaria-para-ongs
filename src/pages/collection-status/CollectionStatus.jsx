@@ -110,7 +110,7 @@ export default function CollectionStatus() {
                 </button>
               </AlertDialog.Trigger>
               <AlertDialog.Content maxWidth="450px">
-                <AlertDialog.Title>Revoke access</AlertDialog.Title>
+                <AlertDialog.Title>Remover PEV</AlertDialog.Title>
                 <AlertDialog.Description size="2">
                   Tem certeza? Ao remover um PEV, ele não estará mais acessível através do SmartCollect.
                 </AlertDialog.Description>
