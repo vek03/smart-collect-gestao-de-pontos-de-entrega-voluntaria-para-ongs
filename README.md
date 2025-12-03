@@ -1,4 +1,4 @@
-# <img src="src/assets/logo_horizontal.png" alt="Logo do SmartCollect" width="600">
+# <img src="web/src/assets/logo_horizontal.png" alt="Logo do SmartCollect" width="600">
 
 Projeto Integrador desenvolvido para implementar um **Ponto de Entrega Voluntária Inteligente (PEV)**.  
 O sistema utiliza sensores ultrassônicos e um ESP32 para medir a porcentagem de preenchimento de coletores, exibindo os dados em um display OLED e enviando-os em tempo real para o **Firebase Realtime Database**.  
@@ -70,7 +70,7 @@ A branch do Dispositivo que hospeda o IoT está disponível no seguinte link:
 
 Exemplo de protótipo de dashboard:  
 <p align="center">
-  <img src="https://img.shields.io/badge/Demo-Em%20Breve-lightgrey?style=for-the-badge"/>
+  <img src="web/src/assets/dashboard.png" alt="Dashboard do SmartCollect">
 </p>  
 
 ---
@@ -89,15 +89,23 @@ Exemplo de protótipo de dashboard:
 ```bash
 smart-collect-ui/
 │
-├── public/            # Arquivos públicos acessíveis diretamente, como ícones e imagens estáticas
-├── src/               # Código-fonte principal da aplicação
-│   ├── assets/        # Logos, ícones e outros arquivos estáticos usados no front-end
-│   ├── components/    # Componentes reutilizáveis da interface (ex: Header, Footer, rotas protegidas)
-│   ├── pages/         # Páginas principais do sistema (cadastro, login, home, etc.)
-│   ├── utils/         # Funções utilitárias e helpers usados em diferentes partes do projeto
-│
-├── .env.example       # Exemplo de configuração das variáveis de ambiente
-├── index.html         # Arquivo HTML base da aplicação React
+├── back/                  # Arquivos públicos acessíveis diretamente, como ícones e imagens estáticas
+│   ├── uploads/           # Pasta de imagens das ONGs
+│   ├── index.js           # Arquivo JS para base do backend
+│   │
+├── web/                   # Código-fonte principal da aplicação
+│   ├── public/            # Arquivos públicos acessíveis diretamente, como ícones e imagens estáticas
+│   ├── src/               # Código-fonte principal da aplicação
+│   │   ├── assets/        # Logos, ícones e outros arquivos estáticos usados no front-end
+│   │   ├── components/    # Componentes reutilizáveis da interface (ex: Header, Footer, rotas protegidas)
+│   │   ├── context/       # Componentes de Contexto da aplicação
+│   │   ├── firebase/      # Componentes do Firebase Realtime e Firebase Firestore
+│   │   ├── pages/         # Páginas principais do sistema (cadastro, login, home, etc.)
+│   │   ├── providers/     # Bibliotecas provedoras
+│   │   ├── utils/         # Funções utilitárias e helpers usados em diferentes partes do projeto
+│   │   │
+│   ├── .env.example       # Exemplo de configuração das variáveis de ambiente
+│   ├── index.html         # Arquivo HTML base da aplicação React
 ```
 
 ---
@@ -111,7 +119,8 @@ smart-collect-ui/
 ```
 
 2. Abra o projeto na sua IDE.
-3. Instale as dependências do Node:
+3. Acesse o front end, rodando `cd web`
+4. Instale as dependências do front-end:
 ```bash
    npm install
 ```
@@ -119,11 +128,14 @@ smart-collect-ui/
 ```bash
    npm run dev
 ```
+5. Em outro terminal, acesse a pasta da API, rodando `cd back`
+6. Instale as dependencias rodando `npm install`
+7. Rode a API com `npm start`
 
 ---
 
 ## 📌 Status do Projeto
-> 🚧 Em desenvolvimento – Versão inicial da UI
+> 🚀 Release [v1.0-front-alpha](https://github.com/fatec-zona-leste/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/v1.0-front-alpha) - Primeira versão Alpha do FrontEnd
 
 ---
 
