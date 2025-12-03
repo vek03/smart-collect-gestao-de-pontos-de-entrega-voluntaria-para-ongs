@@ -132,6 +132,8 @@ smart-collect-ui/
 6. Instale as dependencias rodando `npm install`
 7. Rode a API com `npm start`
 
+> Alternativamente, se tiver Docker na máquina, basta rodar `docker-compose up -d` no terminal na pasta raiz da branch
+
 ---
 
 ## 📌 Status do Projeto
