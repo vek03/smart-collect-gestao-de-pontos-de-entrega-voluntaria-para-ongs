@@ -70,7 +70,7 @@ A branch do Dispositivo que hospeda o IoT está disponível no seguinte link:
 
 Exemplo de protótipo de dashboard:  
 <p align="center">
-  <img src="web/src/assets/dashboard.png" alt="Dashboard do SmartCollect" width="600">
+  <img src="web/src/assets/dashboard.png" alt="Dashboard do SmartCollect">
 </p>  
 
 ---
