@@ -62,7 +62,7 @@ A solução promove práticas ecológicas em consonância com políticas de cida
 
 A branch do Dispositivo que hospeda o IoT está disponível no seguinte link:  
 
-👉 [Acessar Branch do IoT](https://github.com/fatec-zona-leste/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/iot)
+👉 [Acessar Branch do IoT](https://github.com/vek03/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/iot)
 
 ---
 
@@ -115,7 +115,7 @@ smart-collect-ui/
 1. Clone este repositório:
    
 ```bash
-   git clone https://github.com/fatec-zona-leste/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs.git
+   git clone https://github.com/vek03/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs.git
 ```
 
 2. Abra o projeto na sua IDE.
@@ -137,7 +137,7 @@ smart-collect-ui/
 ---
 
 ## 📌 Status do Projeto
-> 🚀 Release [v1.0-front-alpha](https://github.com/fatec-zona-leste/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/v1.0-front-alpha) - Primeira versão Alpha do FrontEnd
+> 🚀 Release [v1.0-front-alpha](https://github.com/vek03/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/v1.0-front-alpha) - Primeira versão Alpha do FrontEnd
 
 ---
 
