@@ -86,7 +86,7 @@ O **SmartCollect IoT** busca tornar os Pontos de Entrega Voluntária mais **efic
 
 A branch do frontend que hospeda a UI está disponível no seguinte link:  
 
-👉 [Acessar Branch do Frontend](https://github.com/fatec-zona-leste/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/main)
+👉 [Acessar Branch do Frontend](https://github.com/vek03/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/main)
 
 ---
 
@@ -134,7 +134,7 @@ SmartCollect-IoT/
 1. Clone este repositório:
    
 ```bash
-   git clone https://github.com/fatec-zona-leste/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs.git
+   git clone https://github.com/vek03/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs.git
 ```
 
 2. Troque para a branch do IoT:
@@ -152,11 +152,11 @@ SmartCollect-IoT/
 ---
 
 ## 📌 Status do Projeto
-> 🚀 Release [v1.0-iot-beta](https://github.com/fatec-zona-leste/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/v1.0-iot-beta) - Primeira versão estável do IoT
+> 🚀 Release [v1.0-iot-beta](https://github.com/vek03/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/v1.0-iot-beta) - Primeira versão estável do IoT
 
-> 🚀 Release [v2.0-iot-beta](https://github.com/fatec-zona-leste/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/v2.0-iot-beta) - Segunda versão estável do IoT
+> 🚀 Release [v2.0-iot-beta](https://github.com/vek03/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/v2.0-iot-beta) - Segunda versão estável do IoT
 
-> 🚀 Release [v2.0-iot-alpha](https://github.com/fatec-zona-leste/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/v2.0-iot-alpha) - Primeira versão Alpha do IoT
+> 🚀 Release [v2.0-iot-alpha](https://github.com/vek03/smart-collect-gestao-de-pontos-de-entrega-voluntaria-para-ongs/tree/v2.0-iot-alpha) - Primeira versão Alpha do IoT
 
 ---
 
@@ -210,6 +210,7 @@ SmartCollect-IoT/
 <p align="center">  
   <sub>© 2025 Smart Collect — Todos os direitos reservados</sub>  
 </p>
+
 
 
 
